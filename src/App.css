@@ -56,5 +56,10 @@
   justify-content: space-between;
   height: 48px;
   width: 200px;
-  background-color: #000;
+}
+.UserPage {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  width: auto;
 }
