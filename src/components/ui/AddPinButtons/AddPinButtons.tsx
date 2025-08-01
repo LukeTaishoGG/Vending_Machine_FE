@@ -4,9 +4,17 @@ type AddPinButtonsProps = {
   onSubmit: (e: React.FormEvent) => void
   onCancel: () => void
   isSubmitting?: boolean
+  submitText?: string
+  loadingText?: string
 }
 
-export const AddPinButtons = ({ onSubmit, onCancel, isSubmitting = false }: AddPinButtonsProps) => {
+export const AddPinButtons = ({
+  onSubmit,
+  onCancel,
+  isSubmitting = false,
+  submitText = 'ピンを追加',
+  loadingText = '追加中...',
+}: AddPinButtonsProps) => {
   return (
     <HStack spacing={4}>
       <Button
@@ -15,16 +23,11 @@ export const AddPinButtons = ({ onSubmit, onCancel, isSubmitting = false }: AddP
         size="lg"
         onClick={onSubmit}
         isLoading={isSubmitting}
-        loadingText="追加中..."
+        loadingText={loadingText}
       >
-        ピンを追加
+        {submitText}
       </Button>
-      <Button
-        onClick={onCancel}
-        variant="outline"
-        size="lg"
-        isDisabled={isSubmitting}
-      >
+      <Button onClick={onCancel} variant="outline" size="lg" isDisabled={isSubmitting}>
         キャンセル
       </Button>
     </HStack>

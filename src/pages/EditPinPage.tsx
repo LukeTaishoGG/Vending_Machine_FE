@@ -1,31 +1,44 @@
 import { Box, VStack, Text } from '@chakra-ui/react'
 import Search from '../components/container/search/Search'
-import { useAddPinForm } from '../hooks/useAddPinForm'
+import { useEditPinForm } from '../hooks/useEditPinForm'
 import { AddPinForm } from '../components/ui/AddPinForm/AddPinForm'
 import { MapSelector } from '../components/ui/MapSelector/MapSelector'
 import { AddPinButtons } from '../components/ui/AddPinButtons/AddPinButtons'
 
-const AddPinPage = () => {
+const EditPinPage = () => {
   const {
     formData,
     search,
     mapCenter,
     selectedLocation,
     isLoadingAddress,
+    isLoading,
     isSubmitting,
     setSearch,
     handleSearch,
     handleMapClick,
     handleInputChange,
-    onSubmit,
-    onCancel,
-  } = useAddPinForm()
+    handleUpdate,
+    handleCancel,
+  } = useEditPinForm()
+
+  if (isLoading) {
+    return (
+      <Box p={6} maxW="1200px" mx="auto">
+        <VStack spacing={6} align="stretch">
+          <Text fontSize="2xl" fontWeight="bold">
+            読み込み中...
+          </Text>
+        </VStack>
+      </Box>
+    )
+  }
 
   return (
     <Box p={6} maxW="1200px" mx="auto">
       <VStack spacing={6} align="stretch">
         <Text fontSize="2xl" fontWeight="bold">
-          追加する自動販売機の情報を入力してください
+          自動販売機の情報を編集してください
         </Text>
         {/* 検索バー */}
         <Box>
@@ -53,17 +66,23 @@ const AddPinPage = () => {
           onMapClick={handleMapClick}
         />
         {/* フォーム */}
-        <Box as="form" onSubmit={onSubmit}>
+        <Box as="form" onSubmit={handleUpdate}>
           <AddPinForm
             formData={formData}
             isLoadingAddress={isLoadingAddress}
             onInputChange={handleInputChange}
           />
-          <AddPinButtons onSubmit={onSubmit} onCancel={onCancel} isSubmitting={isSubmitting} />
+          <AddPinButtons
+            onSubmit={handleUpdate}
+            onCancel={handleCancel}
+            isSubmitting={isSubmitting}
+            submitText="更新"
+            loadingText="更新中..."
+          />
         </Box>
       </VStack>
     </Box>
   )
 }
 
-export default AddPinPage
+export default EditPinPage
