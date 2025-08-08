@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAddPin } from './useAddPin'
-import { useUser } from '../Contexts/UserContext'
+import { useUser } from '../../Contexts/UserContext'
 
 export const useAddPinForm = () => {
   const navigate = useNavigate()
