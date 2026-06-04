@@ -1,7 +1,7 @@
-import { useSignUp } from '../hooks/useSingUpPage'
+import { useSignUp } from '../hooks/useSignUpPage'
 import SignUpForm from '../components/ui/SignUpForm/SignUpForm'
 
-const SingUpPage = () => {
+const SignUpPage = () => {
   const {
     userId,
     setUserId,
@@ -10,7 +10,7 @@ const SingUpPage = () => {
     password,
     setPassword,
     message,
-    handleSubmit
+    handleSubmit,
   } = useSignUp()
 
   return (
@@ -26,4 +26,5 @@ const SingUpPage = () => {
     />
   )
 }
-export default SingUpPage
+
+export default SignUpPage

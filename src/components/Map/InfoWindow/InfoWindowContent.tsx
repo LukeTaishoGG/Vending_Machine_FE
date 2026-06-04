@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Spinner, Text, Box, Button } from '@chakra-ui/react'
-import { getPinDetail, type PinDetailData } from '../../../../services/pinDetailService'
-import { useUser } from '../../../../Contexts/UserContext'
+import { getPinDetail, type PinDetailData } from '../../../services/pinDetailService'
+import { useUser } from '../../../Contexts/UserContext'
 import { useNavigate } from 'react-router-dom'
 
 type InfoWindowContentProps = {
@@ -35,7 +35,6 @@ const InfoWindowContent = ({ pinId }: InfoWindowContentProps) => {
       })
   }, [pinId])
 
-  // 編集権限の判定
   const canEdit = user && data && user.id === data.user_id
 
   const handleEdit = () => {

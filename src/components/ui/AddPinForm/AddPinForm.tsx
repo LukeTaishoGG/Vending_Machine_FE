@@ -8,6 +8,8 @@ type FormData = {
   description: string
   manufacturer: string
   address: string
+  lat: number
+  lng: number
 }
 
 type AddPinFormProps = {
@@ -100,6 +102,28 @@ export const AddPinForm = ({ formData, isLoadingAddress, onInputChange }: AddPin
             住所を取得中...
           </Text>
         )}
+      </Box>
+      <Box>
+        <Text mb={2}>緯度</Text>
+        <Input
+          type="text"
+          value={
+            formData.lat !== 0 || formData.lng !== 0 ? formData.lat.toFixed(6) : ''
+          }
+          isReadOnly
+          placeholder="地図をクリックすると自動入力"
+        />
+      </Box>
+      <Box>
+        <Text mb={2}>経度</Text>
+        <Input
+          type="text"
+          value={
+            formData.lat !== 0 || formData.lng !== 0 ? formData.lng.toFixed(6) : ''
+          }
+          isReadOnly
+          placeholder="地図をクリックすると自動入力"
+        />
       </Box>
     </VStack>
   )

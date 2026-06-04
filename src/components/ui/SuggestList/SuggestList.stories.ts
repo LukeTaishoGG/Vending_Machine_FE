@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { SuggestList } from './SuggestList'
-import type { MapPin } from '../../../dummyPin/MapPin'
+import type { MapPin } from '../../../types/pin'
 
 const meta = {
   title: 'UI/SuggestList',

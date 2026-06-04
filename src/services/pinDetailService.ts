@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:3001'
+import { API_URL } from './config'
 
 // PIN詳細情報の型定義
 export interface PinDetailData {
@@ -23,7 +23,7 @@ export interface PinDetailData {
 // PIN詳細情報を取得
 export const getPinDetail = async (pinId: number): Promise<PinDetailData[]> => {
   try {
-    const response = await fetch(`${API_BASE_URL}/api/vending_machines/by_pin/${pinId}`)
+    const response = await fetch(`${API_URL}/vending_machines/by_pin/${pinId}`)
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`)
@@ -48,7 +48,7 @@ export const updatePin = async (
   },
 ): Promise<{ success: boolean; message: string; data: any }> => {
   try {
-    const response = await fetch(`${API_BASE_URL}/api/pins/${pinId}`, {
+    const response = await fetch(`${API_URL}/pins/${pinId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -74,7 +74,7 @@ export const updateMachineDescription = async (
   description: string,
 ): Promise<{ success: boolean; message: string; data: any }> => {
   try {
-    const response = await fetch(`${API_BASE_URL}/api/machine_descriptions/${machineDescriptionId}`, {
+    const response = await fetch(`${API_URL}/machine_descriptions/${machineDescriptionId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -100,7 +100,7 @@ export const updateProduct = async (
   product_name: string,
 ): Promise<{ success: boolean; message: string; data: any }> => {
   try {
-    const response = await fetch(`${API_BASE_URL}/api/products/${productId}`, {
+    const response = await fetch(`${API_URL}/products/${productId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -126,7 +126,7 @@ export const updatePriceRange = async (
   price_range: string,
 ): Promise<{ success: boolean; message: string; data: any }> => {
   try {
-    const response = await fetch(`${API_BASE_URL}/api/price_ranges/${priceRangeId}`, {
+    const response = await fetch(`${API_URL}/price_ranges/${priceRangeId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -152,7 +152,7 @@ export const updateManufacturer = async (
   manufacturer_name: string,
 ): Promise<{ success: boolean; message: string; data: any }> => {
   try {
-    const response = await fetch(`${API_BASE_URL}/api/manufacturers/${manufacturerId}`, {
+    const response = await fetch(`${API_URL}/manufacturers/${manufacturerId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -184,7 +184,7 @@ export const updateVendingMachine = async (
   },
 ): Promise<{ message: string; machineId: number }> => {
   try {
-    const response = await fetch(`${API_BASE_URL}/api/vending_machines/${machineId}`, {
+    const response = await fetch(`${API_URL}/vending_machines/${machineId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

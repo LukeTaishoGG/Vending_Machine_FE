@@ -35,16 +35,7 @@ export const MapSelector = ({ center, zoom, selectedLocation, onMapClick }: MapS
           clickableIcons: false,
         }}
       >
-        {selectedLocation && (
-          <Marker
-            position={selectedLocation}
-            icon={{
-              url: '/images/map_pin.png',
-              scaledSize: new google.maps.Size(50, 50),
-              anchor: new google.maps.Point(19, 38),
-            }}
-          />
-        )}
+        {selectedLocation && <Marker position={selectedLocation} />}
       </GoogleMap>
     </Box>
   )

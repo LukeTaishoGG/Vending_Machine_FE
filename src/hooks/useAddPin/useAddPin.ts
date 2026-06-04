@@ -11,7 +11,7 @@ import {
 } from '../../services/addPinService'
 import { validateUserId } from '../../logic/validation/addPinValidation'
 import type { AddPinFormData, Location } from '../../types/addPin'
-import { useCurrentLocation } from '../../logic/centerSpot'
+import { useCurrentLocation } from '../../logic/centerSpot/useCurrentLocation'
 
 interface UseAddPinReturn {
   formData: AddPinFormData
@@ -67,17 +67,22 @@ export const useAddPin = (user: any): UseAddPinReturn => {
     if (!event.latLng) return
     const lat = event.latLng.lat()
     const lng = event.latLng.lng()
+
+    setSelectedLocation({ lat, lng })
+    setFormData((prev) => ({
+      ...prev,
+      lat,
+      lng,
+    }))
+
     setIsLoadingAddress(true)
     try {
       const address = await reverseGeocode(lat, lng)
       if (address) {
-        setFormData(prev => ({
+        setFormData((prev) => ({
           ...prev,
           address,
-          lat,
-          lng
         }))
-        setSelectedLocation({ lat, lng })
       }
     } catch (error) {
       console.error('逆ジオコーディングエラー:', error)

@@ -6,7 +6,7 @@ export const useSignUp = () => {
   const [formData, setFormData] = useState<SignUpFormData>({
     userId: '',
     email: '',
-    password: ''
+    password: '',
   })
   const [message, setMessage] = useState('')
 
@@ -15,11 +15,10 @@ export const useSignUp = () => {
     setMessage('')
 
     try {
-      // API呼び出し
       const result = await signUp({
         user_id: formData.userId,
         email: formData.email,
-        password: formData.password
+        password: formData.password,
       })
 
       setMessage(result.success ? result.message! : result.error!)
@@ -29,9 +28,9 @@ export const useSignUp = () => {
     }
   }
 
-  const setUserId = (value: string) => setFormData(prev => ({ ...prev, userId: value }))
-  const setEmail = (value: string) => setFormData(prev => ({ ...prev, email: value }))
-  const setPassword = (value: string) => setFormData(prev => ({ ...prev, password: value }))
+  const setUserId = (value: string) => setFormData((prev) => ({ ...prev, userId: value }))
+  const setEmail = (value: string) => setFormData((prev) => ({ ...prev, email: value }))
+  const setPassword = (value: string) => setFormData((prev) => ({ ...prev, password: value }))
 
   return {
     userId: formData.userId,
@@ -41,6 +40,6 @@ export const useSignUp = () => {
     password: formData.password,
     setPassword,
     message,
-    handleSubmit
+    handleSubmit,
   }
 }

@@ -1,5 +1,5 @@
 import { GoogleMap, Marker } from '@react-google-maps/api'
-import type { MapPin } from '../../../dummyPin/MapPin'
+import type { MapPin } from '../../../types/pin'
 
 type MapDisplayProps = {
   center: { lat: number; lng: number }

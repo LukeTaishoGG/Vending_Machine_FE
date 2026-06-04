@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { renderHook } from '@testing-library/react'
-import { useCurrentLocation } from './index'
+import { useCurrentLocation } from './useCurrentLocation'
 
 // モックの設定
 const mockGeolocation = {

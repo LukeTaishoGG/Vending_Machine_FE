@@ -4,11 +4,11 @@ import type {
   ApiResponse
 } from '../types/addPin'
 
-const API_BASE_URL = 'http://localhost:3001/api'
+import { API_URL } from './config'
 
 // ピンデータを保存
 export const createPin = async (pinData: PinData): Promise<ApiResponse> => {
-  const response = await fetch(`${API_BASE_URL}/map_pins`, {
+  const response = await fetch(`${API_URL}/map_pins`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(pinData)
@@ -23,7 +23,7 @@ export const createPin = async (pinData: PinData): Promise<ApiResponse> => {
 
 // カテゴリを保存
 export const createCategory = async (name: string): Promise<ApiResponse> => {
-  const response = await fetch(`${API_BASE_URL}/categories`, {
+  const response = await fetch(`${API_URL}/categories`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ name })
@@ -38,7 +38,7 @@ export const createCategory = async (name: string): Promise<ApiResponse> => {
 
 // メーカーを保存
 export const createManufacturer = async (name: string): Promise<ApiResponse> => {
-  const response = await fetch(`${API_BASE_URL}/manufacturers`, {
+  const response = await fetch(`${API_URL}/manufacturers`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ name })
@@ -53,7 +53,7 @@ export const createManufacturer = async (name: string): Promise<ApiResponse> => 
 
 // 価格帯を保存
 export const createPriceRange = async (priceRange: string): Promise<ApiResponse> => {
-  const response = await fetch(`${API_BASE_URL}/price_ranges`, {
+  const response = await fetch(`${API_URL}/price_ranges`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ price_range: priceRange })
@@ -68,7 +68,7 @@ export const createPriceRange = async (priceRange: string): Promise<ApiResponse>
 
 // 商品を保存
 export const createProduct = async (name: string): Promise<ApiResponse> => {
-  const response = await fetch(`${API_BASE_URL}/products`, {
+  const response = await fetch(`${API_URL}/products`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ name })
@@ -83,7 +83,7 @@ export const createProduct = async (name: string): Promise<ApiResponse> => {
 
 // 自販機説明を保存
 export const createMachineDescription = async (description: string): Promise<ApiResponse> => {
-  const response = await fetch(`${API_BASE_URL}/machine_descriptions`, {
+  const response = await fetch(`${API_URL}/machine_descriptions`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ description })
@@ -98,7 +98,7 @@ export const createMachineDescription = async (description: string): Promise<Api
 
 // 自販機を保存
 export const createVendingMachine = async (machineData: VendingMachineData): Promise<ApiResponse> => {
-  const response = await fetch(`${API_BASE_URL}/vending_machines`, {
+  const response = await fetch(`${API_URL}/vending_machines`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(machineData)

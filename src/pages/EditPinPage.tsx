@@ -1,5 +1,5 @@
 import { Box, VStack, Text } from '@chakra-ui/react'
-import Search from '../components/container/search/Search'
+import Search from '../components/search/Search'
 import { useEditPinForm } from '../hooks/useEditPinForm/useEditPinForm'
 import { AddPinForm } from '../components/ui/AddPinForm/AddPinForm'
 import { MapSelector } from '../components/ui/MapSelector/MapSelector'

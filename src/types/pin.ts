@@ -1,12 +1,19 @@
-// APIから取得したピンの型定義
+export type MapPin = {
+  id: number
+  lat: number
+  lng: number
+  address: string
+  machine_name?: string
+}
+
 export type ApiPin = {
   id: number
   latitude: string
   longitude: string
   address: string
+  machine_name?: string
 }
 
-// 地図の境界を表す型
 export type MapBounds = {
   ne: { lat: number; lng: number }
   sw: { lat: number; lng: number }
