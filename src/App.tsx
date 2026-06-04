@@ -7,8 +7,7 @@ import { BrowserRouter, useNavigate } from 'react-router-dom'
 import { UserProvider, useUser } from './Contexts/UserContext'
 import { LoadScript } from '@react-google-maps/api'
 import AppRouter from './router/AppRouter'
-
-const GOOGLE_MAPS_API_KEY = 'AIzaSyDZQJtHec4ZjmCW1phkU1yPP71TZpQv1hc'
+import { GOOGLE_MAPS_API_KEY } from './config/env'
 
 // ピン追加コンポーネント
 const AddPinButton = () => {
@@ -79,6 +78,12 @@ const MainApp = () => {
 }
 
 function App() {
+  if (!GOOGLE_MAPS_API_KEY) {
+    throw new Error(
+      'VITE_GOOGLE_MAPS_API_KEY ERROR',
+    )
+  }
+
   return (
     <LoadScript googleMapsApiKey={GOOGLE_MAPS_API_KEY}>
       <UserProvider>
