@@ -9,7 +9,7 @@ import {
   createMachineDescription,
   createVendingMachine
 } from '../../services/addPinService'
-import { validateUserId } from '../../logic/validation/addPinValidation'
+import { validateUserId } from '../validation/addPinValidation'
 import type { AddPinFormData, Location } from '../../types/addPin'
 import { useCurrentLocation } from '../centerSpot/useCurrentLocation'
 

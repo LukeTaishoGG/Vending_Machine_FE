@@ -1,17 +1,15 @@
 import { useDisclosure, Box } from '@chakra-ui/react'
 import { useRef } from 'react'
 import type { MapPin } from '../../types/pin'
-import { useCurrentLocation } from '../../logic/centerSpot'
-import {
-  useMapPins,
-  useMapIdle,
-  useMapSuggxestions,
-  useMapInteractions,
-  useMapDisplayPins,
-} from './hooks/useMapPins'
+import { useCurrentLocation } from '../../hooks/centerSpot/useCurrentLocation'
+import { useMapPins } from './hooks/useMapPins'
+import { useMapIdle } from './hooks/useMapIdle'
+import { useMapSuggestions } from './hooks/useMapSuggestions'
+import { useMapInteractions } from './hooks/useMapInteractions'
+import { useMapDisplayPins } from './hooks/useMapDisplayPins'
 import InfoWindow from './InfoWindow/InfoWindow'
 import { SuggestList } from '../ui/SuggestList/SuggestList'
-import { MapDisplay }x from '../ui/MapDisplay/MapDisplay'
+import { MapDisplay } from '../ui/MapDisplay/MapDisplay'
 import { LoadingIndicator } from '../ui/LoadingIndicator/LoadingIndicator'
 
 type MyGoogleMapProps = {
