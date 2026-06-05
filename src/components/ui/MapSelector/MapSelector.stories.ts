@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { MapSelector } from './MapSelector'
+import { MapSelector } from '@/components/ui/MapSelector/MapSelector'
 
 const meta = {
   title: 'UI/MapSelector',

@@ -1,9 +1,9 @@
 import { Box, VStack, Text } from '@chakra-ui/react'
-import Search from '../components/search/Search'
-import { useEditPinForm } from '../hooks/useEditPinForm/useEditPinForm'
-import { AddPinForm } from '../components/ui/AddPinForm/AddPinForm'
-import { MapSelector } from '../components/ui/MapSelector/MapSelector'
-import { AddPinButtons } from '../components/ui/AddPinButtons/AddPinButtons'
+import Search from '@/components/search/Search'
+import { useEditPinForm } from '@/hooks/useEditPinForm/useEditPinForm'
+import { AddPinForm } from '@/components/ui/AddPinForm/AddPinForm'
+import { MapSelector } from '@/components/ui/MapSelector/MapSelector'
+import { AddPinButtons } from '@/components/ui/AddPinButtons/AddPinButtons'
 
 const EditPinPage = () => {
   const {

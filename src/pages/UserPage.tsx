@@ -1,4 +1,4 @@
-import { useUser } from '../Contexts/UserContext';
+import { useUser } from '@/Contexts/UserContext';
 import { Box, VStack, Text, Heading } from '@chakra-ui/react';
 
 const UserPage = () => {

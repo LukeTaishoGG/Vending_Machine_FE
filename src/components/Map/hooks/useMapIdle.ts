@@ -1,8 +1,8 @@
 import { useCallback, type MutableRefObject } from 'react'
-import { useDebounce } from '../../../hooks/debounce/debounce'
-import { fetchPinsInBounds } from '../../../services/pinService'
-import { getMapBounds } from '../Service/mapUtils'
-import type { ApiPin } from '../../../types/pin'
+import { useDebounce } from '@/hooks/debounce/debounce'
+import { fetchPinsInBounds } from '@/services/pinService'
+import { getMapBounds } from '@/components/Map/Service/mapUtils'
+import type { ApiPin } from '@/types/pin'
 
 export const useMapIdle = (
   onPinsReceived: (pins: ApiPin[]) => void,

@@ -2,9 +2,9 @@ import type {
   PinData,
   VendingMachineData,
   ApiResponse
-} from '../types/addPin'
+} from '@/types/addPin'
 
-import { API_URL } from './config'
+import { API_URL } from '@/services/config'
 
 // ピンデータを保存
 export const createPin = async (pinData: PinData): Promise<ApiResponse> => {

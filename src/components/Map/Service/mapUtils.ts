@@ -1,4 +1,4 @@
-import type { MapBounds } from '../../../types/pin'
+import type { MapBounds } from '@/types/pin'
 
 export const getMapBounds = (bounds: google.maps.LatLngBounds): MapBounds => {
   const ne = bounds.getNorthEast()

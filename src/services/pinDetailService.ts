@@ -1,4 +1,4 @@
-import { API_URL } from './config'
+import { API_URL } from '@/services/config'
 
 // PIN詳細情報の型定義
 export interface PinDetailData {

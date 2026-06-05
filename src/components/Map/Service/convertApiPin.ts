@@ -1,4 +1,4 @@
-import type { ApiPin, MapPin } from '../../../types/pin'
+import type { ApiPin, MapPin } from '@/types/pin'
 
 export const convertApiPinToMapPin = (pin: ApiPin): MapPin => ({
   id: pin.id,

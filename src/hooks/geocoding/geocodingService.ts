@@ -1,4 +1,4 @@
-import type { Location } from '../../types/addPin'
+import type { Location } from '@/types/addPin'
 
 // 住所から座標を取得
 export const geocodeAddress = async (address: string): Promise<Location | null> => {

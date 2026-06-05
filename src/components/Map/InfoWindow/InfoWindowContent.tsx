@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Spinner, Text, Box, Button } from '@chakra-ui/react'
-import { getPinDetail, type PinDetailData } from '../../../services/pinDetailService'
-import { useUser } from '../../../Contexts/UserContext'
+import { getPinDetail, type PinDetailData } from '@/services/pinDetailService'
+import { useUser } from '@/Contexts/UserContext'
 import { useNavigate } from 'react-router-dom'
 
 type InfoWindowContentProps = {
@@ -76,6 +76,7 @@ const InfoWindowContent = ({ pinId }: InfoWindowContentProps) => {
           style={{ border: 0, borderRadius: '8px' }}
           loading="lazy"
           allowFullScreen
+          allow="accelerometer; gyroscope"
           src={`https://www.google.com/maps?q=&layer=c&cbll=${data.latitude},${data.longitude}&cbp=11,0,0,0,0&output=svembed`}
         />
       </div>

@@ -1,11 +1,11 @@
 import { Routes, Route } from 'react-router-dom'
 
-import LoginPage from '../pages/LoginPage'
-import SignUpPage from '../pages/SignUpPage'
-import UserPage from '../pages/UserPage'
-import AddPinPage from '../pages/AddPinPage'
-import EditPinPage from '../pages/EditPinPage'
-import MyGoogleMap from '../components/Map/MyGoogleMap'
+import LoginPage from '@/pages/LoginPage'
+import SignUpPage from '@/pages/SignUpPage'
+import UserPage from '@/pages/UserPage'
+import AddPinPage from '@/pages/AddPinPage'
+import EditPinPage from '@/pages/EditPinPage'
+import MyGoogleMap from '@/components/Map/MyGoogleMap'
 
 type AppRouterProps = {
   search: string

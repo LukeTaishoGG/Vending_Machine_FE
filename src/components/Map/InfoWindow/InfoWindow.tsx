@@ -5,7 +5,7 @@ import {
   DrawerBody,
   DrawerCloseButton,
 } from '@chakra-ui/react'
-import InfoWindowContent from './InfoWindowContent'
+import InfoWindowContent from '@/components/Map/InfoWindow/InfoWindowContent'
 
 type InfoWindowProps = {
   pinId: number | null

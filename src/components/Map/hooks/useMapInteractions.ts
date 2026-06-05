@@ -1,5 +1,5 @@
 import { useState, useCallback, type MutableRefObject } from 'react'
-import type { MapPin } from '../../../types/pin'
+import type { MapPin } from '@/types/pin'
 
 export const useMapInteractions = () => {
   const [selectedPinId, setSelectedPinId] = useState<number | null>(null)

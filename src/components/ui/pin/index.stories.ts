@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite'
 
 import { fn } from 'storybook/test'
 
-import { Pin } from './'
+import { Pin } from '@/components/ui/pin'
 
 const meta = {
   title: 'ui/Pin',
