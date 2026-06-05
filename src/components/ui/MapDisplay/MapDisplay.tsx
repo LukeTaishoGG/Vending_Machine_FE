@@ -1,5 +1,7 @@
-import { GoogleMap, Marker } from '@react-google-maps/api'
-import type { MapPin } from '../../../dummyPin/MapPin'
+import { GoogleMap } from '@react-google-maps/api'
+import { AdvancedMapMarker } from '@/components/Map/AdvancedMapMarker'
+import { defaultGoogleMapOptions } from '@/config/googleMaps'
+import type { MapPin } from '@/types/pin'
 
 type MapDisplayProps = {
   center: { lat: number; lng: number }
@@ -35,19 +37,10 @@ export const MapDisplay = ({
       mapContainerStyle={containerStyle}
       center={center}
       zoom={zoom}
-      options={{
-        zoomControl: true,
-        mapTypeControl: false,
-        fullscreenControl: false,
-        streetViewControl: false,
-        scaleControl: false,
-        panControl: false,
-        rotateControl: false,
-        clickableIcons: false,
-      }}
+      options={defaultGoogleMapOptions}
     >
       {pins.map((pin) => (
-        <Marker
+        <AdvancedMapMarker
           key={pin.id}
           position={{ lat: pin.lat, lng: pin.lng }}
           onClick={() => onMarkerClick(pin)}

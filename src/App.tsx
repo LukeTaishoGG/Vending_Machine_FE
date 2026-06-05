@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import { ChakraProvider, Box, Flex, Text } from '@chakra-ui/react'
-import HeaderUser from './components/container/HeaderUser/HeaderUser'
-import Search from './components/container/search/Search'
+import HeaderUser from '@/components/HeaderUser/HeaderUser'
+import Search from '@/components/search/Search'
 import './App.css'
 import { BrowserRouter, useNavigate } from 'react-router-dom'
-import { UserProvider, useUser } from './Contexts/UserContext'
+import { UserProvider, useUser } from '@/Contexts/UserContext'
 import { LoadScript } from '@react-google-maps/api'
-import AppRouter from './router/AppRouter'
-
-const GOOGLE_MAPS_API_KEY = 'AIzaSyDZQJtHec4ZjmCW1phkU1yPP71TZpQv1hc'
+import AppRouter from '@/router/AppRouter'
+import { GOOGLE_MAPS_API_KEY, GOOGLE_MAPS_MAP_ID } from '@/config/env'
+import { GOOGLE_MAP_LIBRARIES } from '@/config/googleMaps'
 
 // ピン追加コンポーネント
 const AddPinButton = () => {
@@ -79,8 +79,18 @@ const MainApp = () => {
 }
 
 function App() {
+  if (!GOOGLE_MAPS_API_KEY) {
+    throw new Error(
+      'VITE_GOOGLE_MAPS_API_KEY ERROR',
+    )
+  }
+
   return (
-    <LoadScript googleMapsApiKey={GOOGLE_MAPS_API_KEY}>
+    <LoadScript
+      googleMapsApiKey={GOOGLE_MAPS_API_KEY}
+      libraries={GOOGLE_MAP_LIBRARIES}
+      mapIds={[GOOGLE_MAPS_MAP_ID]}
+    >
       <UserProvider>
         <ChakraProvider>
           <BrowserRouter>

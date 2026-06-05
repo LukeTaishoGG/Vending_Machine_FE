@@ -1,5 +1,5 @@
-import { useLogin } from '../hooks/useLogin'
-import LoginForm from '../components/ui/LoginForm/LoginForm'
+import { useLogin } from '@/hooks/useLogin/useLogin'
+import LoginForm from '@/components/ui/LoginForm/LoginForm'
 
 const LoginPage = () => {
   const {

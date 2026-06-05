@@ -1,11 +1,10 @@
-import type { SignUpRequest, SignUpResponse, LoginRequest, LoginResponse } from '../types/auth'
-
-const API_BASE_URL = 'http://localhost:3001'
+import type { SignUpRequest, SignUpResponse, LoginRequest, LoginResponse } from '@/types/auth'
+import { API_URL } from '@/services/config'
 
 // サインアップAPI
 export const signUp = async (signUpData: SignUpRequest): Promise<SignUpResponse> => {
   try {
-    const response = await fetch(`${API_BASE_URL}/api/users`, {
+    const response = await fetch(`${API_URL}/users`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(signUpData)
@@ -26,7 +25,7 @@ export const signUp = async (signUpData: SignUpRequest): Promise<SignUpResponse>
 // ログインAPI
 export const login = async (loginData: LoginRequest): Promise<LoginResponse> => {
   try {
-    const response = await fetch(`${API_BASE_URL}/api/login`, {
+    const response = await fetch(`${API_URL}/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(loginData)

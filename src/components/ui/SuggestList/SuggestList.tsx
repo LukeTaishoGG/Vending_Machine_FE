@@ -1,5 +1,5 @@
 import { Box, List, ListItem, Text } from '@chakra-ui/react'
-import type { MapPin } from '../../../dummyPin/MapPin'
+import type { MapPin } from '@/types/pin'
 
 type SuggestListProps = {
   suggestions: MapPin[]

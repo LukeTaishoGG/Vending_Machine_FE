@@ -1,5 +1,7 @@
-import { GoogleMap, Marker } from '@react-google-maps/api'
+import { GoogleMap } from '@react-google-maps/api'
 import { Box, Text } from '@chakra-ui/react'
+import { AdvancedMapMarker } from '@/components/Map/AdvancedMapMarker'
+import { defaultGoogleMapOptions } from '@/config/googleMaps'
 
 type MapSelectorProps = {
   center: { lat: number; lng: number }
@@ -24,27 +26,9 @@ export const MapSelector = ({ center, zoom, selectedLocation, onMapClick }: MapS
         center={center}
         zoom={zoom}
         onClick={onMapClick}
-        options={{
-          zoomControl: true,
-          mapTypeControl: false,
-          fullscreenControl: false,
-          streetViewControl: false,
-          scaleControl: false,
-          panControl: false,
-          rotateControl: false,
-          clickableIcons: false,
-        }}
+        options={defaultGoogleMapOptions}
       >
-        {selectedLocation && (
-          <Marker
-            position={selectedLocation}
-            icon={{
-              url: '/images/map_pin.png',
-              scaledSize: new google.maps.Size(50, 50),
-              anchor: new google.maps.Point(19, 38),
-            }}
-          />
-        )}
+        {selectedLocation && <AdvancedMapMarker position={selectedLocation} />}
       </GoogleMap>
     </Box>
   )

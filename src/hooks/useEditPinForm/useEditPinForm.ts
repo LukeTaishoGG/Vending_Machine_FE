@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { useUser } from '../../Contexts/UserContext'
+import { useUser } from '@/Contexts/UserContext'
 import { 
   getPinDetail, 
   updatePin, 
@@ -8,10 +8,10 @@ import {
   updatePriceRange,
   updateManufacturer,
   type PinDetailData 
-} from '../../services/pinDetailService'
-import { geocodeAddress, reverseGeocode } from '../../logic/geocoding/geocodingService'
-import { useCurrentLocation } from '../../logic/centerSpot'
-import type { AddPinFormData, Location } from '../../types/addPin'
+} from '@/services/pinDetailService'
+import { geocodeAddress, reverseGeocode } from '@/hooks/geocoding/geocodingService'
+import { useCurrentLocation } from '@/hooks/centerSpot/useCurrentLocation'
+import type { AddPinFormData, Location } from '@/types/addPin'
 
 export const useEditPinForm = () => {
   const navigate = useNavigate()
@@ -133,6 +133,14 @@ export const useEditPinForm = () => {
     if (!event.latLng) return
     const lat = event.latLng.lat()
     const lng = event.latLng.lng()
+
+    setSelectedLocation({ lat, lng })
+    setFormData((prev) => ({
+      ...prev,
+      lat,
+      lng,
+    }))
+
     setIsLoadingAddress(true)
     try {
       const address = await reverseGeocode(lat, lng)
@@ -140,10 +148,7 @@ export const useEditPinForm = () => {
         setFormData((prev) => ({
           ...prev,
           address,
-          lat,
-          lng,
         }))
-        setSelectedLocation({ lat, lng })
       }
     } catch (error) {
       console.error('逆ジオコーディングエラー:', error)
