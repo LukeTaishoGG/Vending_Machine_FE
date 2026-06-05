@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useUser } from '../Contexts/UserContext'
-import { login } from '../services/authService'
-import type { LoginFormData } from '../types/auth'
+import { useUser } from '../../Contexts/UserContext'
+import { login } from '../../services/authService'
+import type { LoginFormData } from '../../types/auth'
 
 export const useLogin = () => {
   const navigate = useNavigate()

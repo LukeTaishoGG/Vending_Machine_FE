@@ -9,8 +9,8 @@ import {
   updateManufacturer,
   type PinDetailData 
 } from '../../services/pinDetailService'
-import { geocodeAddress, reverseGeocode } from '../../logic/geocoding/geocodingService'
-import { useCurrentLocation } from '../../logic/centerSpot/useCurrentLocation'
+import { geocodeAddress, reverseGeocode } from '../geocoding/geocodingService'
+import { useCurrentLocation } from '../centerSpot/useCurrentLocation'
 import type { AddPinFormData, Location } from '../../types/addPin'
 
 export const useEditPinForm = () => {

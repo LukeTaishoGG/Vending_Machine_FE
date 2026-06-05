@@ -1,5 +1,5 @@
 import UserMenu from '../ui/UserMenu/UserMenu'
-import { useHeaderUser } from '../../hooks/useHeaderUser'
+import { useHeaderUser } from '../../hooks/useHeaderUser/useHeaderUser'
 
 const HeaderUser = () => {
   const { isLoggedIn, handleLogout, handleSignup, handleLogin } = useHeaderUser()

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import type { ApiPin, MapPin } from '../../../types/pin'
 import { fetchAllMapPins } from '../../../services/pinService'
-import { convertApiPinsToMapPins } from '../logic/convertApiPin'
+import { convertApiPinsToMapPins } from '../Service/convertApiPin'
 
 export const useMapPins = () => {
   const [apiPins, setApiPins] = useState<ApiPin[]>([])

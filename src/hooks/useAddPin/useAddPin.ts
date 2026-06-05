@@ -1,5 +1,5 @@
 import { useState, useCallback, useEffect } from 'react'
-import { geocodeAddress, reverseGeocode } from '../../logic/geocoding/geocodingService'
+import { geocodeAddress, reverseGeocode } from '../geocoding/geocodingService'
 import {
   createPin,
   createCategory,
@@ -11,7 +11,7 @@ import {
 } from '../../services/addPinService'
 import { validateUserId } from '../../logic/validation/addPinValidation'
 import type { AddPinFormData, Location } from '../../types/addPin'
-import { useCurrentLocation } from '../../logic/centerSpot/useCurrentLocation'
+import { useCurrentLocation } from '../centerSpot/useCurrentLocation'
 
 interface UseAddPinReturn {
   formData: AddPinFormData

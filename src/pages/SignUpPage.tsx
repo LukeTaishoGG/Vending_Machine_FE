@@ -1,4 +1,4 @@
-import { useSignUp } from '../hooks/useSignUpPage'
+import { useSignUp } from '../hooks/useSingUpPage/useSignUpPage'
 import SignUpForm from '../components/ui/SignUpForm/SignUpForm'
 
 const SignUpPage = () => {
