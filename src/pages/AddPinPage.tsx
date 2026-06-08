@@ -25,7 +25,7 @@ const AddPinPage = () => {
     <Box p={6} maxW="1200px" mx="auto">
       <VStack spacing={6} align="stretch">
         <Text fontSize="2xl" fontWeight="bold">
-          追加する自動販売機の情報を入力してください
+          追加する自動販売機の情報を入力してください 🧐
         </Text>
         {/* 検索バー */}
         <Box>

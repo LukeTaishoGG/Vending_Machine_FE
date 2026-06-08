@@ -43,7 +43,7 @@ const MainApp = () => {
   const navigate = useNavigate()
 
   return (
-    <Flex direction="column" h="100vh">
+    <Flex direction="column" w="100%" h="100vh">
       <Box className="header">
         <Box className="header-title-box">
           <Text
@@ -71,7 +71,7 @@ const MainApp = () => {
           </Flex>
         </Box>
       </Box>
-      <Box flex="1">
+      <Box flex="1" w="100%" minH={0}>
         <AppRouter search={search} />
       </Box>
     </Flex>

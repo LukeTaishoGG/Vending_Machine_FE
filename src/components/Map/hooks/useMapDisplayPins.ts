@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import type { MapPin } from '@/types/pin'
-import { mockMapPins } from '@/data/mockMapPins'
+import { MOCK_MAP_PINS } from '@/data/mockLocation'
 
 export const useMapDisplayPins = (search: string, convertedPins: MapPin[]) => {
   return useMemo(() => {
@@ -15,7 +15,7 @@ export const useMapDisplayPins = (search: string, convertedPins: MapPin[]) => {
       return filteredPins
     }
 
-    return mockMapPins.filter(
+    return MOCK_MAP_PINS.filter(
       (pin) => pin.address && (search === '' || pin.address.includes(search))
     )
   }, [search, convertedPins])
