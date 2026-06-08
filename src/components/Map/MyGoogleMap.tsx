@@ -1,3 +1,5 @@
+'use client'
+
 import { useDisclosure, Box } from '@chakra-ui/react'
 import { useRef } from 'react'
 import type { MapPin } from '@/types/pin'
@@ -42,7 +44,7 @@ const MyGoogleMap = ({ search }: MyGoogleMapProps) => {
   }
 
   return (
-    <Box position="relative" w="100vw" h="100vh">
+    <Box position="relative" w="100%" h="100%" minH={0}>
       <SuggestList
         suggestions={suggestPins}
         onSuggestionClick={onSuggestClick}

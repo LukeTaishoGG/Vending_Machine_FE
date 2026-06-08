@@ -1,9 +1,5 @@
 import { useEffect, useState } from 'react'
-
-const SHIBUYA_LOCATION = {
-  lat: 35.6595,
-  lng: 139.7005,
-}
+import { SHIBUYA_LOCATION } from '@/data/mockLocation'
 
 export const useCurrentLocation = () => {
   const [location, setLocation] = useState<{ lat: number; lng: number }>(SHIBUYA_LOCATION)

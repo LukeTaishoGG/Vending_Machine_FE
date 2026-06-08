@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useRouter } from 'next/navigation'
 import { useAddPin } from '@/hooks/useAddPin/useAddPin'
 import { useUser } from '@/Contexts/UserContext'
 
 export const useAddPinForm = () => {
-  const navigate = useNavigate()
+  const router = useRouter()
   const { user } = useUser()
   const {
     formData,
@@ -27,7 +27,7 @@ export const useAddPinForm = () => {
     try {
       const result = await handleAddPin(e)
       if (result?.success) {
-        navigate('/')
+        router.push('/')
       }
     } catch (error) {
       console.error('ピン追加エラー:', error)
@@ -37,7 +37,7 @@ export const useAddPinForm = () => {
   }
 
   const onCancel = () => {
-    navigate('/')
+    router.push('/')
   }
 
   return {

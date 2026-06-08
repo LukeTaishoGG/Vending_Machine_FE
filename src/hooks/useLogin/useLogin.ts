@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useRouter } from 'next/navigation'
 import { useUser } from '@/Contexts/UserContext'
 import { login } from '@/services/authService'
 import type { LoginFormData } from '@/types/auth'
 
 export const useLogin = () => {
-  const navigate = useNavigate()
+  const router = useRouter()
   const [formData, setFormData] = useState<LoginFormData>({
     userIdOrEmail: '',
     password: ''
@@ -28,7 +28,7 @@ export const useLogin = () => {
       if (result.success) {
         setMessage('ログイン完了')
         setUser(result.user)
-        navigate('/user')
+        router.push('/user')
       } else {
         setMessage(result.error!)
       }

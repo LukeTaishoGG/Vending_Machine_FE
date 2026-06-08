@@ -1,8 +1,10 @@
+'use client'
+
 import { useState, useEffect } from 'react'
 import { Spinner, Text, Box, Button } from '@chakra-ui/react'
 import { getPinDetail, type PinDetailData } from '@/services/pinDetailService'
 import { useUser } from '@/Contexts/UserContext'
-import { useNavigate } from 'react-router-dom'
+import { useRouter } from 'next/navigation'
 
 type InfoWindowContentProps = {
   pinId: number
@@ -13,7 +15,7 @@ const InfoWindowContent = ({ pinId }: InfoWindowContentProps) => {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const { user } = useUser()
-  const navigate = useNavigate()
+  const router = useRouter()
 
   useEffect(() => {
     setIsLoading(true)
@@ -39,7 +41,7 @@ const InfoWindowContent = ({ pinId }: InfoWindowContentProps) => {
 
   const handleEdit = () => {
     if (data) {
-      navigate(`/edit-pin/${data.pin_id}`)
+      router.push(`/edit-pin/${data.pin_id}`)
     }
   }
 
