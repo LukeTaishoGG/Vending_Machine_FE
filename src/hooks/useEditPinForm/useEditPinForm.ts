@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useRouter, useParams } from 'next/navigation'
 import { useUser } from '@/Contexts/UserContext'
 import { 
   getPinDetail, 
@@ -14,8 +14,9 @@ import { useCurrentLocation } from '@/hooks/centerSpot/useCurrentLocation'
 import type { AddPinFormData, Location } from '@/types/addPin'
 
 export const useEditPinForm = () => {
-  const navigate = useNavigate()
-  const { pinId } = useParams()
+  const router = useRouter()
+  const params = useParams()
+  const pinId = params?.pinId as string | undefined
   const { user } = useUser()
   const currentLocation = useCurrentLocation()
 
@@ -68,7 +69,7 @@ export const useEditPinForm = () => {
           // 権限チェック
           if (user?.id !== data.user_id) {
             alert('このピンを編集する権限がありません')
-            navigate('/')
+            router.push('/')
             return
           }
 
@@ -96,19 +97,19 @@ export const useEditPinForm = () => {
           setSelectedLocation(location)
         } else {
           alert('ピンデータが見つかりません')
-          navigate('/')
+          router.push('/')
         }
       } catch (error) {
         console.error('ピンデータ取得エラー:', error)
         alert('ピンデータの取得に失敗しました')
-        navigate('/')
+        router.push('/')
       } finally {
         setIsLoading(false)
       }
     }
 
     fetchPinData()
-  }, [pinId, user, navigate])
+  }, [pinId, user, router])
 
   // 検索でマップを動かすロジック
   const handleSearch = async (searchTerm: string) => {
@@ -198,7 +199,7 @@ export const useEditPinForm = () => {
       }
 
       alert('更新完了')
-      navigate('/')
+      router.push('/')
     } catch (error) {
       console.error('更新エラー:', error)
       alert(error instanceof Error ? error.message : '更新失敗')
@@ -208,7 +209,7 @@ export const useEditPinForm = () => {
   }
 
   const handleCancel = () => {
-    navigate('/')
+    router.push('/')
   }
 
   const handleInputChange = (field: string, value: string) => {

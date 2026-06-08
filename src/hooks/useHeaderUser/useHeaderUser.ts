@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useRouter } from 'next/navigation'
 import { useUser } from '@/Contexts/UserContext'
 
 export const useHeaderUser = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
-  const navigate = useNavigate()
+  const router = useRouter()
   const { user, setUser } = useUser()
 
   useEffect(() => {
@@ -14,15 +14,15 @@ export const useHeaderUser = () => {
   const handleLogout = () => {
     setUser(null)
     setIsLoggedIn(false)
-    navigate('/')
+    router.push('/')
   }
 
   const handleSignup = () => {
-    navigate('/signup')
+    router.push('/signup')
   }
 
   const handleLogin = () => {
-    navigate('/login')
+    router.push('/login')
   }
 
   return {

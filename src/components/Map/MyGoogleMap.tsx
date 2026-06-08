@@ -1,3 +1,5 @@
+'use client'
+
 import { useDisclosure, Box } from '@chakra-ui/react'
 import { useRef } from 'react'
 import type { MapPin } from '@/types/pin'
