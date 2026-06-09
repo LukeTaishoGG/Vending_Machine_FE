@@ -7,7 +7,7 @@ export const signUp = async (signUpData: SignUpRequest): Promise<SignUpResponse>
     const response = await fetch(`${API_URL}/users`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(signUpData)
+      body: JSON.stringify(signUpData),
     })
 
     const data = await response.json()
@@ -28,7 +28,7 @@ export const login = async (loginData: LoginRequest): Promise<LoginResponse> => 
     const response = await fetch(`${API_URL}/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(loginData)
+      body: JSON.stringify(loginData),
     })
 
     const data = await response.json()

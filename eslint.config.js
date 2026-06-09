@@ -9,7 +9,7 @@ import tseslint from 'typescript-eslint'
 
 export default [
   ...tseslint.config(
-    { ignores: ['dist', 'node_modules'] }, //ESLintがチェック対象からnode_modulesディレクトリを除外
+    { ignores: ['dist', 'node_modules', '.next', 'next-env.d.ts'] },
     {
       extends: [js.configs.recommended, ...tseslint.configs.recommended],
       files: ['**/*.{ts,tsx}'],
@@ -25,6 +25,10 @@ export default [
         ...reactHooks.configs.recommended.rules,
         'react/react-in-jsx-scope': 'off', //JSX を使うファイルでimport　React from 'react'を書かなくてもエラーにならないようにする
         'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+        '@typescript-eslint/no-unused-vars': [
+          'error',
+          { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
+        ],
       },
     },
   ),

@@ -8,7 +8,7 @@ declare namespace google.maps {
   class Geocoder {
     geocode(
       request: GeocoderRequest,
-      callback?: (results: GeocoderResult[], status: GeocoderStatus) => void
+      callback?: (results: GeocoderResult[], status: GeocoderStatus) => void,
     ): Promise<GeocoderResponse>
   }
 
@@ -50,7 +50,7 @@ declare namespace google.maps {
     APPROXIMATE = 'APPROXIMATE',
     GEOMETRIC_CENTER = 'GEOMETRIC_CENTER',
     RANGE_INTERPOLATED = 'RANGE_INTERPOLATED',
-    ROOFTOP = 'ROOFTOP'
+    ROOFTOP = 'ROOFTOP',
   }
 
   enum GeocoderStatus {
@@ -60,7 +60,7 @@ declare namespace google.maps {
     OVER_QUERY_LIMIT = 'OVER_QUERY_LIMIT',
     REQUEST_DENIED = 'REQUEST_DENIED',
     UNKNOWN_ERROR = 'UNKNOWN_ERROR',
-    ZERO_RESULTS = 'ZERO_RESULTS'
+    ZERO_RESULTS = 'ZERO_RESULTS',
   }
 
   interface GeocoderComponentRestrictions {

@@ -35,7 +35,9 @@ const UserMenu = ({ isLoggedIn, onLogout, onSignup, onLogin }: UserMenuProps) =>
         ) : (
           <>
             <MenuItem sx={{ color: 'blue' }}>プロフィール</MenuItem>
-            <MenuItem sx={{ color: 'red' }} onClick={onLogout}>ログアウト</MenuItem>
+            <MenuItem sx={{ color: 'red' }} onClick={onLogout}>
+              ログアウト
+            </MenuItem>
           </>
         )}
       </MenuList>

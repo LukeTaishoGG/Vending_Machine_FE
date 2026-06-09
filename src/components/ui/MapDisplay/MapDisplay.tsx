@@ -25,7 +25,7 @@ export const MapDisplay = ({
   onMarkerClick,
   onMapLoad,
   onMapIdle,
-  mapRef
+  mapRef,
 }: MapDisplayProps) => {
   return (
     <GoogleMap
@@ -48,4 +48,4 @@ export const MapDisplay = ({
       ))}
     </GoogleMap>
   )
-} 
+}

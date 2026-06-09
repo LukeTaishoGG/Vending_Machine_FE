@@ -8,7 +8,7 @@ export const useMapDisplayPins = (search: string, convertedPins: MapPin[]) => {
       (pin) =>
         search === '' ||
         (pin.address && pin.address.includes(search)) ||
-        (pin.machine_name && pin.machine_name.includes(search))
+        (pin.machine_name && pin.machine_name.includes(search)),
     )
 
     if (filteredPins.length > 0) {
@@ -16,7 +16,7 @@ export const useMapDisplayPins = (search: string, convertedPins: MapPin[]) => {
     }
 
     return MOCK_MAP_PINS.filter(
-      (pin) => pin.address && (search === '' || pin.address.includes(search))
+      (pin) => pin.address && (search === '' || pin.address.includes(search)),
     )
   }, [search, convertedPins])
 }

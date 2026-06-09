@@ -10,9 +10,7 @@ export const fetchAllMapPins = async (): Promise<ApiPin[]> => {
 }
 
 export const searchMapPins = async (query: string): Promise<ApiPin[]> => {
-  const response = await fetch(
-    `${API_URL}/map_pins/search?query=${encodeURIComponent(query)}`
-  )
+  const response = await fetch(`${API_URL}/map_pins/search?query=${encodeURIComponent(query)}`)
   if (!response.ok) {
     throw new Error('ピン検索に失敗しました')
   }
@@ -21,7 +19,7 @@ export const searchMapPins = async (query: string): Promise<ApiPin[]> => {
 
 export const fetchPinsInBounds = async (bounds: MapBounds): Promise<ApiPin[]> => {
   const response = await fetch(
-    `${API_URL}/map_pins?ne_lat=${bounds.ne.lat}&ne_lng=${bounds.ne.lng}&sw_lat=${bounds.sw.lat}&sw_lng=${bounds.sw.lng}`
+    `${API_URL}/map_pins?ne_lat=${bounds.ne.lat}&ne_lng=${bounds.ne.lng}&sw_lat=${bounds.sw.lat}&sw_lng=${bounds.sw.lng}`,
   )
   if (!response.ok) {
     throw new Error('ピン取得に失敗しました')

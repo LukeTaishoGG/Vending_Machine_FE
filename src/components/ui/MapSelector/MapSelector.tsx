@@ -32,4 +32,4 @@ export const MapSelector = ({ center, zoom, selectedLocation, onMapClick }: MapS
       </GoogleMap>
     </Box>
   )
-} 
+}

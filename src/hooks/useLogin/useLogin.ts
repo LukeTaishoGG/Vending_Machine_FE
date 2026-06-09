@@ -8,7 +8,7 @@ export const useLogin = () => {
   const router = useRouter()
   const [formData, setFormData] = useState<LoginFormData>({
     userIdOrEmail: '',
-    password: ''
+    password: '',
   })
   const [message, setMessage] = useState('')
   const [isLoading, setIsLoading] = useState(false)
@@ -22,12 +22,12 @@ export const useLogin = () => {
     try {
       const result = await login({
         user_id_or_email: formData.userIdOrEmail,
-        password: formData.password
+        password: formData.password,
       })
 
       if (result.success) {
         setMessage('ログイン完了')
-        setUser(result.user)
+        setUser(result.user ?? null)
         router.push('/user')
       } else {
         setMessage(result.error!)
@@ -40,8 +40,9 @@ export const useLogin = () => {
     }
   }
 
-  const setUserIdOrEmail = (value: string) => setFormData(prev => ({ ...prev, userIdOrEmail: value }))
-  const setPassword = (value: string) => setFormData(prev => ({ ...prev, password: value }))
+  const setUserIdOrEmail = (value: string) =>
+    setFormData((prev) => ({ ...prev, userIdOrEmail: value }))
+  const setPassword = (value: string) => setFormData((prev) => ({ ...prev, password: value }))
 
   return {
     userIdOrEmail: formData.userIdOrEmail,
@@ -50,6 +51,6 @@ export const useLogin = () => {
     setPassword,
     message,
     isLoading,
-    handleLogin
+    handleLogin,
   }
-} 
+}

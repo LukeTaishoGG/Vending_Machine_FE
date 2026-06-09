@@ -6,7 +6,7 @@ import type { ApiPin } from '@/types/pin'
 
 export const useMapIdle = (
   onPinsReceived: (pins: ApiPin[]) => void,
-  mapRef: MutableRefObject<google.maps.Map | null>
+  mapRef: MutableRefObject<google.maps.Map | null>,
 ) => {
   const debouncedFetchPins = useDebounce(async () => {
     const bounds = mapRef.current?.getBounds()

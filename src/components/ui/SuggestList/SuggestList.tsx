@@ -35,11 +35,13 @@ export const SuggestList = ({ suggestions, onSuggestionClick, isVisible }: Sugge
             px={4}
             py={2}
             borderBottom="1px solid #eee"
-            _hover={{ bg: "teal.50", cursor: "pointer" }}
+            _hover={{ bg: 'teal.50', cursor: 'pointer' }}
             onClick={() => onSuggestionClick(pin)}
           >
-            <Text fontWeight="bold">{pin.machine_name || "名称未設定"}</Text>
-            <Text fontSize="sm" color="gray.500">{pin.address}</Text>
+            <Text fontWeight="bold">{pin.machine_name || '名称未設定'}</Text>
+            <Text fontSize="sm" color="gray.500">
+              {pin.address}
+            </Text>
           </ListItem>
         ))}
       </List>

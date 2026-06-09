@@ -1,10 +1,10 @@
 'use client'
 
-import { useUser } from '@/Contexts/UserContext';
-import { Box, VStack, Text, Heading } from '@chakra-ui/react';
+import { useUser } from '@/Contexts/UserContext'
+import { Box, VStack, Text, Heading } from '@chakra-ui/react'
 
 const UserPage = () => {
-  const { user } = useUser();
+  const { user } = useUser()
 
   return (
     <Box p={6} maxW="600px" mx="auto">
@@ -26,7 +26,7 @@ const UserPage = () => {
         )}
       </VStack>
     </Box>
-  );
-};
+  )
+}
 
-export default UserPage;
+export default UserPage

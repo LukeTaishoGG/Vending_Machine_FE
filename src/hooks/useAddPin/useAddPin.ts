@@ -7,10 +7,11 @@ import {
   createPriceRange,
   createProduct,
   createMachineDescription,
-  createVendingMachine
+  createVendingMachine,
 } from '@/services/addPinService'
 import { validateUserId } from '@/hooks/validation/addPinValidation'
 import type { AddPinFormData, Location } from '@/types/addPin'
+import type { User } from '@/types/auth'
 import { useCurrentLocation } from '@/hooks/centerSpot/useCurrentLocation'
 
 interface UseAddPinReturn {
@@ -26,7 +27,7 @@ interface UseAddPinReturn {
   handleInputChange: (field: string, value: string) => void
 }
 
-export const useAddPin = (user: any): UseAddPinReturn => {
+export const useAddPin = (user: User | null): UseAddPinReturn => {
   const currentLocation = useCurrentLocation()
   const [formData, setFormData] = useState<AddPinFormData>({
     machine_name: '',
@@ -37,7 +38,7 @@ export const useAddPin = (user: any): UseAddPinReturn => {
     manufacturer: '',
     address: '',
     lat: 0,
-    lng: 0
+    lng: 0,
   })
   const [search, setSearch] = useState('')
   const [mapCenter, setMapCenter] = useState<Location>(currentLocation)
@@ -52,9 +53,9 @@ export const useAddPin = (user: any): UseAddPinReturn => {
       if (location) {
         setMapCenter(location)
         setSelectedLocation(location)
-        setFormData(prev => ({
+        setFormData((prev) => ({
           ...prev,
-          ...location
+          ...location,
         }))
       }
     } catch (error) {
@@ -106,7 +107,7 @@ export const useAddPin = (user: any): UseAddPinReturn => {
         latitude: formData.lat,
         longitude: formData.lng,
         address: formData.address,
-        machine_name: formData.machine_name
+        machine_name: formData.machine_name,
       })
       // 2. カテゴリを保存
       const categoryResult = await createCategory(formData.category)
@@ -126,7 +127,7 @@ export const useAddPin = (user: any): UseAddPinReturn => {
         category_id: categoryResult.id,
         price_range_id: priceRangeResult.id,
         product_id: productResult.id,
-        machine_description_id: machineDescriptionResult.id
+        machine_description_id: machineDescriptionResult.id,
       })
       alert('登録完了')
       return { success: true }
@@ -138,9 +139,9 @@ export const useAddPin = (user: any): UseAddPinReturn => {
   }
 
   const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [field]: value
+      [field]: value,
     }))
   }
 
@@ -154,6 +155,6 @@ export const useAddPin = (user: any): UseAddPinReturn => {
     handleSearch,
     handleMapClick,
     handleAddPin,
-    handleInputChange
+    handleInputChange,
   }
 }

@@ -11,7 +11,7 @@ const LoginPage = () => {
     setPassword,
     message,
     isLoading,
-    handleLogin
+    handleLogin,
   } = useLogin()
 
   return (

@@ -27,7 +27,7 @@ export const AdvancedMapMarker = ({ position, onClick }: AdvancedMapMarkerProps)
       google.maps.event.removeListener(listener)
       marker.map = null
     }
-  }, [map, position.lat, position.lng])
+  }, [map, position])
 
   return null
 }
