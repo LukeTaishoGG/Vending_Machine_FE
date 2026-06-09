@@ -1,9 +1,0 @@
-{
-  "/_not-found/page": "app/_not-found/page.js",
-  "/(app)/login/page": "app/(app)/login/page.js",
-  "/(app)/signup/page": "app/(app)/signup/page.js",
-  "/(app)/user/page": "app/(app)/user/page.js",
-  "/(app)/edit-pin/[pinId]/page": "app/(app)/edit-pin/[pinId]/page.js",
-  "/(app)/add-pin/page": "app/(app)/add-pin/page.js",
-  "/(app)/page": "app/(app)/page.js"
-}
