@@ -1,19 +1,19 @@
 export interface PinProps {
   /** Pinの位置情報 */
-  lat?: number;
-  lng?: number;
+  lat?: number
+  lng?: number
   /** Pinの表示名 */
-  label?: string;
+  label?: string
   /** Pinの色 */
-  color?: string;
+  color?: string
   /** クリックハンドラー */
-  onClick?: () => void;
+  onClick?: () => void
 }
 
 /** 地図上のピンコンポーネント */
 export const Pin = ({
-  lat = 0,
-  lng = 0,
+  lat: _lat = 0,
+  lng: _lng = 0,
   label = 'Pin',
   color = '#ff0000',
   onClick,
@@ -32,12 +32,12 @@ export const Pin = ({
         justifyContent: 'center',
         fontSize: '12px',
         color: 'white',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
       }}
       onClick={onClick}
       {...props}
     >
       {label}
     </div>
-  );
-};
+  )
+}

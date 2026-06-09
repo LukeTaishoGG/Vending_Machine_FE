@@ -4,16 +4,8 @@ import { useSignUp } from '@/hooks/useSingUpPage/useSignUpPage'
 import SignUpForm from '@/components/ui/SignUpForm/SignUpForm'
 
 const SignUpPage = () => {
-  const {
-    userId,
-    setUserId,
-    email,
-    setEmail,
-    password,
-    setPassword,
-    message,
-    handleSubmit,
-  } = useSignUp()
+  const { userId, setUserId, email, setEmail, password, setPassword, message, handleSubmit } =
+    useSignUp()
 
   return (
     <SignUpForm

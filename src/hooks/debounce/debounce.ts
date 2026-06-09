@@ -2,10 +2,7 @@ import { useRef, useCallback } from 'react'
 
 // デバウンス機能付きの関数を作成するフック
 //Map移動で繰り返しAPIを叩かないようにするために使用
-export const useDebounce = <T extends (...args: any[]) => void>(
-  callback: T,
-  delay: number
-) => {
+export const useDebounce = <T extends (...args: unknown[]) => void>(callback: T, delay: number) => {
   const timeoutRef = useRef<NodeJS.Timeout | null>(null)
 
   const debouncedCallback = useCallback(
@@ -18,7 +15,7 @@ export const useDebounce = <T extends (...args: any[]) => void>(
         callback(...args)
       }, delay)
     },
-    [callback, delay]
+    [callback, delay],
   )
 
   return debouncedCallback

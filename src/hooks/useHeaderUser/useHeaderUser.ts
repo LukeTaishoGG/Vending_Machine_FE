@@ -29,6 +29,6 @@ export const useHeaderUser = () => {
     isLoggedIn,
     handleLogout,
     handleSignup,
-    handleLogin
+    handleLogin,
   }
 }

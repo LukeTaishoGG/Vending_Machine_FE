@@ -17,7 +17,7 @@ const LoginForm = ({
   setPassword,
   message,
   isLoading,
-  onSubmit
+  onSubmit,
 }: LoginFormProps) => {
   return (
     <Box p={6} maxW="400px" mx="auto">
@@ -31,14 +31,14 @@ const LoginForm = ({
               type="text"
               placeholder="ユーザーID または メールアドレス"
               value={userIdOrEmail}
-              onChange={e => setUserIdOrEmail(e.target.value)}
+              onChange={(e) => setUserIdOrEmail(e.target.value)}
               required
             />
             <Input
               type="password"
               placeholder="パスワード"
               value={password}
-              onChange={e => setPassword(e.target.value)}
+              onChange={(e) => setPassword(e.target.value)}
               required
             />
             <Button
@@ -53,10 +53,7 @@ const LoginForm = ({
           </VStack>
         </form>
         {message && (
-          <Text
-            color={message.includes('成功') ? 'green.500' : 'red.500'}
-            textAlign="center"
-          >
+          <Text color={message.includes('成功') ? 'green.500' : 'red.500'} textAlign="center">
             {message}
           </Text>
         )}

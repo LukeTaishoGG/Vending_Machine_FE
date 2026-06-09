@@ -8,5 +8,4 @@ export const convertApiPinToMapPin = (pin: ApiPin): MapPin => ({
   machine_name: pin.machine_name,
 })
 
-export const convertApiPinsToMapPins = (pins: ApiPin[]): MapPin[] =>
-  pins.map(convertApiPinToMapPin)
+export const convertApiPinsToMapPins = (pins: ApiPin[]): MapPin[] => pins.map(convertApiPinToMapPin)

@@ -19,9 +19,7 @@ const InfoWindow = ({ pinId, isOpen, onClose }: InfoWindowProps) => {
       <DrawerOverlay />
       <DrawerContent>
         <DrawerCloseButton />
-        <DrawerBody>
-          {pinId && <InfoWindowContent pinId={pinId} />}
-        </DrawerBody>
+        <DrawerBody>{pinId && <InfoWindowContent pinId={pinId} />}</DrawerBody>
       </DrawerContent>
     </Drawer>
   )

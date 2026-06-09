@@ -107,9 +107,7 @@ export const AddPinForm = ({ formData, isLoadingAddress, onInputChange }: AddPin
         <Text mb={2}>緯度</Text>
         <Input
           type="text"
-          value={
-            formData.lat !== 0 || formData.lng !== 0 ? formData.lat.toFixed(6) : ''
-          }
+          value={formData.lat !== 0 || formData.lng !== 0 ? formData.lat.toFixed(6) : ''}
           isReadOnly
           placeholder="地図をクリックすると自動入力"
         />
@@ -118,9 +116,7 @@ export const AddPinForm = ({ formData, isLoadingAddress, onInputChange }: AddPin
         <Text mb={2}>経度</Text>
         <Input
           type="text"
-          value={
-            formData.lat !== 0 || formData.lng !== 0 ? formData.lng.toFixed(6) : ''
-          }
+          value={formData.lat !== 0 || formData.lng !== 0 ? formData.lng.toFixed(6) : ''}
           isReadOnly
           placeholder="地図をクリックすると自動入力"
         />

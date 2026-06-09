@@ -1,3 +1,9 @@
+export interface User {
+  id: number
+  user_id: string
+  email: string
+}
+
 // サインアップフォームデータの型定義
 export interface SignUpFormData {
   userId: string
@@ -37,5 +43,5 @@ export interface LoginResponse {
   error?: string
   message?: string
   token?: string
-  user?: any
-} 
+  user?: User
+}

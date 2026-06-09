@@ -1,5 +1,11 @@
 import { API_URL } from '@/services/config'
 
+interface ApiUpdateResponse<T = unknown> {
+  success: boolean
+  message: string
+  data: T
+}
+
 // PIN詳細情報の型定義
 export interface PinDetailData {
   vending_machine_id: number
@@ -46,7 +52,7 @@ export const updatePin = async (
     latitude: number
     longitude: number
   },
-): Promise<{ success: boolean; message: string; data: any }> => {
+): Promise<ApiUpdateResponse> => {
   try {
     const response = await fetch(`${API_URL}/pins/${pinId}`, {
       method: 'PUT',
@@ -72,7 +78,7 @@ export const updatePin = async (
 export const updateMachineDescription = async (
   machineDescriptionId: number,
   description: string,
-): Promise<{ success: boolean; message: string; data: any }> => {
+): Promise<ApiUpdateResponse> => {
   try {
     const response = await fetch(`${API_URL}/machine_descriptions/${machineDescriptionId}`, {
       method: 'PUT',
@@ -98,7 +104,7 @@ export const updateMachineDescription = async (
 export const updateProduct = async (
   productId: number,
   product_name: string,
-): Promise<{ success: boolean; message: string; data: any }> => {
+): Promise<ApiUpdateResponse> => {
   try {
     const response = await fetch(`${API_URL}/products/${productId}`, {
       method: 'PUT',
@@ -124,7 +130,7 @@ export const updateProduct = async (
 export const updatePriceRange = async (
   priceRangeId: number,
   price_range: string,
-): Promise<{ success: boolean; message: string; data: any }> => {
+): Promise<ApiUpdateResponse> => {
   try {
     const response = await fetch(`${API_URL}/price_ranges/${priceRangeId}`, {
       method: 'PUT',
@@ -150,7 +156,7 @@ export const updatePriceRange = async (
 export const updateManufacturer = async (
   manufacturerId: number,
   manufacturer_name: string,
-): Promise<{ success: boolean; message: string; data: any }> => {
+): Promise<ApiUpdateResponse> => {
   try {
     const response = await fetch(`${API_URL}/manufacturers/${manufacturerId}`, {
       method: 'PUT',

@@ -15,7 +15,7 @@ export const useMapInteractions = () => {
       }
       setSelectedPinId(pin.id)
     },
-    []
+    [],
   )
 
   const clearSelectedPin = useCallback(() => {

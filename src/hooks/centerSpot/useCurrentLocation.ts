@@ -16,7 +16,7 @@ export const useCurrentLocation = () => {
         console.error('位置情報の取得に失敗しました:', err)
         alert('位置情報取得できませんでした。')
         setLocation(SHIBUYA_LOCATION)
-      }
+      },
     )
   }, [])
 

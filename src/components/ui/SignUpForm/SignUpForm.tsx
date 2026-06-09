@@ -19,7 +19,7 @@ const SignUpForm = ({
   password,
   setPassword,
   message,
-  onSubmit
+  onSubmit,
 }: SignUpFormProps) => {
   return (
     <Box p={6} maxW="400px" mx="auto">
@@ -33,21 +33,21 @@ const SignUpForm = ({
               type="text"
               placeholder="ユーザーID"
               value={userId}
-              onChange={e => setUserId(e.target.value)}
+              onChange={(e) => setUserId(e.target.value)}
               required
             />
             <Input
               type="email"
               placeholder="メールアドレス"
               value={email}
-              onChange={e => setEmail(e.target.value)}
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
             <Input
               type="password"
               placeholder="パスワード"
               value={password}
-              onChange={e => setPassword(e.target.value)}
+              onChange={(e) => setPassword(e.target.value)}
               required
             />
             <Button type="submit" colorScheme="blue">
@@ -56,10 +56,7 @@ const SignUpForm = ({
           </VStack>
         </form>
         {message && (
-          <Text
-            color={message.includes('成功') ? 'green.500' : 'red.500'}
-            textAlign="center"
-          >
+          <Text color={message.includes('成功') ? 'green.500' : 'red.500'} textAlign="center">
             {message}
           </Text>
         )}

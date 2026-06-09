@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react'
 import { useRouter, useParams } from 'next/navigation'
 import { useUser } from '@/Contexts/UserContext'
-import { 
-  getPinDetail, 
-  updatePin, 
+import {
+  getPinDetail,
+  updatePin,
   updateMachineDescription,
   updatePriceRange,
   updateManufacturer,
-  type PinDetailData 
+  type PinDetailData,
 } from '@/services/pinDetailService'
 import { geocodeAddress, reverseGeocode } from '@/hooks/geocoding/geocodingService'
 import { useCurrentLocation } from '@/hooks/centerSpot/useCurrentLocation'
@@ -51,7 +51,7 @@ export const useEditPinForm = () => {
       // pinIdから:1を除去して数値に変換
       const cleanPinId = pinId.replace(':1', '')
       const numericPinId = parseInt(cleanPinId)
-      
+
       console.log('cleanPinId:', cleanPinId)
       console.log('numericPinId:', numericPinId)
 
