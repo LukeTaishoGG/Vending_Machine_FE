@@ -4,7 +4,6 @@ export interface User {
   email: string
 }
 
-export type AuthStatus = 'loading' | 'authenticated' | 'unauthenticated'
 
 // サインアップフォームデータの型定義
 export interface SignUpFormData {
