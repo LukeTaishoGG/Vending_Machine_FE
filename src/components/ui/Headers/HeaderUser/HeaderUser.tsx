@@ -1,7 +1,7 @@
 import UserMenu from '@/components/ui/UserMenu/UserMenu'
 import { useHeaderUser } from '@/hooks/useHeaderUser/useHeaderUser'
 
-const HeaderUser = () => {
+const HeaderUserMenu = () => {
   const { isLoggedIn, handleLogout, handleSignup, handleLogin } = useHeaderUser()
 
   return (
@@ -14,4 +14,4 @@ const HeaderUser = () => {
   )
 }
 
-export default HeaderUser
+export default HeaderUserMenu

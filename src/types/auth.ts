@@ -4,6 +4,8 @@ export interface User {
   email: string
 }
 
+export type AuthStatus = 'loading' | 'authenticated' | 'unauthenticated'
+
 // サインアップフォームデータの型定義
 export interface SignUpFormData {
   userId: string
@@ -42,6 +44,5 @@ export interface LoginResponse {
   success?: boolean
   error?: string
   message?: string
-  token?: string
   user?: User
 }

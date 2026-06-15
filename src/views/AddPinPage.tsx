@@ -4,7 +4,7 @@ import { Box, VStack, Text } from '@chakra-ui/react'
 import Search from '@/components/search/Search'
 import { useAddPinForm } from '@/hooks/useAddPinForm/useAddPinForm'
 import { AddPinForm } from '@/components/ui/AddPinForm/AddPinForm'
-import { MapSelector } from '@/components/ui/MapSelector/MapSelector'
+import { MapSelector } from '@/components/ui/MapUI/MapSelector/MapSelector'
 import { AddPinButtons } from '@/components/ui/AddPinButtons/AddPinButtons'
 
 const AddPinPage = () => {
