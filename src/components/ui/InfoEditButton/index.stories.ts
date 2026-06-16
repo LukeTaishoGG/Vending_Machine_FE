@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { InfoEditButton } from '@/components/ui/InfoEditButton/InfoEditButton'
+import { InfoEditButton } from '@/components/ui/InfoEditButton/index.stories'
 
 const meta: Meta<typeof InfoEditButton> = {
   title: 'UI/InfoEditButton',

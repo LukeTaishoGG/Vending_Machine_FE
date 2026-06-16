@@ -1,7 +1,7 @@
 'use client'
 
 import { useLogin } from '@/hooks/useLogin/useLogin'
-import LoginForm from '@/components/ui/LoginForm/LoginForm'
+import LoginForm from '@/components/ui/LoginForm'
 
 const LoginPage = () => {
   const {
