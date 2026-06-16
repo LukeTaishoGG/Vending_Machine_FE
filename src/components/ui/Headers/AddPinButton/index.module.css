@@ -1,0 +1,12 @@
+.addPinButton {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.addPinButtonText {
+  margin-right: 0.5rem;
+  font-size: 1.25rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: bold;
+  color: #213547;
+}

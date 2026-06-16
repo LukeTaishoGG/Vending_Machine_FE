@@ -1,4 +1,4 @@
-import UserMenu from '@/components/ui/UserMenu/UserMenu'
+import UserMenu from '@/components/ui/UserMenu'
 import { useHeaderUser } from '@/hooks/useHeaderUser/useHeaderUser'
 
 const HeaderUser = () => {

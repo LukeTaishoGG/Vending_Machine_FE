@@ -1,10 +1,11 @@
-'use client'
+import type { Metadata } from 'next'
+import HomeContent from './HomeContent'
 
-import MyGoogleMap from '@/components/Map/MyGoogleMap'
-import { useSearch } from '@/Contexts/SearchContext'
+export const metadata: Metadata = {
+  title: 'Deep 自販機 Map',
+  description: '自動販売機マップ',
+}
 
 export default function HomePage() {
-  const { search } = useSearch()
-
-  return <MyGoogleMap search={search} />
+  return <HomeContent />
 }

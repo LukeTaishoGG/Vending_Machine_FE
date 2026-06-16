@@ -1,0 +1,13 @@
+.header-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.header-logo-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

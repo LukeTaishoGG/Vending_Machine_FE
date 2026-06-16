@@ -13,6 +13,10 @@ import InfoWindow from '@/components/InfoWindow/InfoWindow'
 import { SuggestList } from '@/components/ui/SuggestList'
 import { MapDisplay } from '@/components/ui/MapUI/MapDisplay'
 import { LoadingIndicator } from '@/components/ui/LoadingIndicator'
+import { LoadScript } from '@react-google-maps/api'
+import { GOOGLE_MAPS_API_KEY } from '@/config/env'
+import { GOOGLE_MAP_LIBRARIES } from '@/config/googleMaps'
+import { GOOGLE_MAPS_MAP_ID } from '@/config/env'
 
 type MyGoogleMapProps = {
   search: string
@@ -44,6 +48,11 @@ const MyGoogleMap = ({ search }: MyGoogleMapProps) => {
   }
 
   return (
+    <LoadScript
+      googleMapsApiKey={GOOGLE_MAPS_API_KEY}
+      libraries={GOOGLE_MAP_LIBRARIES}
+      mapIds={[GOOGLE_MAPS_MAP_ID]}
+    >
     <Box position="relative" w="100%" h="100%" minH={0}>
       <SuggestList
         suggestions={suggestPins}
@@ -64,6 +73,7 @@ const MyGoogleMap = ({ search }: MyGoogleMapProps) => {
       <InfoWindow pinId={selectedPinId} isOpen={isOpen} onClose={onClose} />
       {isLoading && <LoadingIndicator />}
     </Box>
+    </LoadScript>
   )
 }
 

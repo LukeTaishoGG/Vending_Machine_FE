@@ -1,7 +1,7 @@
 'use client'
 
 import { useSignUp } from '@/hooks/useSingUpPage/useSignUpPage'
-import SignUpForm from '@/components/ui/SignUpForm/SignUpForm'
+import SignUpForm from '@/components/ui/SignUpForm'
 
 const SignUpPage = () => {
   const { userId, setUserId, email, setEmail, password, setPassword, message, handleSubmit } =
