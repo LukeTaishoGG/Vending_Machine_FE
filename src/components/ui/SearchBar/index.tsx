@@ -8,7 +8,7 @@ type SearchProps = {
   placeholder?: string
 }
 
-const Search = ({ value, onChange, onKeyPress, placeholder = '検索' }: SearchProps) => (
+const SearchBar = ({ value, onChange, onKeyPress, placeholder = '検索' }: SearchProps) => (
   <InputGroup>
     <InputLeftElement pointerEvents="none">
       <SearchIcon color="gray.300" />
@@ -26,4 +26,4 @@ const Search = ({ value, onChange, onKeyPress, placeholder = '検索' }: SearchP
   </InputGroup>
 )
 
-export default Search
+export default SearchBar

@@ -1,11 +1,11 @@
 'use client'
 
 import { Box, VStack, Text } from '@chakra-ui/react'
-import Search from '@/components/search/Search'
+import SearchBar from '@/components/ui/SearchBar'
 import { useEditPinForm } from '@/hooks/useEditPinForm/useEditPinForm'
-import { AddPinForm } from '@/components/ui/AddPinPages/AddPinForm/AddPinForm'
+import { AddPinForm } from '@/components/ui/AddPinPages/AddPinForm'
 import { MapSelector } from '@/components/ui/MapUI/MapSelector/MapSelector'
-import { AddPinButtons } from '@/components/ui/AddPinPages/AddPinButtons/AddPinButtons'
+import { AddPinButtons } from '@/components/ui/AddPinPages/AddPinButtons'
 
 const EditPinPage = () => {
   const {
@@ -47,7 +47,7 @@ const EditPinPage = () => {
           <Text mb={2} fontWeight="bold">
             場所を検索
           </Text>
-          <Search
+          <SearchBar
             value={search}
             onChange={(e) => {
               setSearch(e.target.value)

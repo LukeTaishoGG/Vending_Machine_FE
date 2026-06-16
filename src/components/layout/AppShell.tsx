@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation'
 import { Box, Flex, Text } from '@chakra-ui/react'
 import HeaderUser from '@/components/ui/Headers/HeaderUser/HeaderUser'
-import Search from '@/components/search/Search'
+import SearchBar from '@/components/ui/SearchBar'
 import { SearchProvider, useSearch } from '@/Contexts/SearchContext'
 import { useUser } from '@/Contexts/UserContext'
 
@@ -56,8 +56,8 @@ const AppShellContent = ({ children }: { children: React.ReactNode }) => {
         <AddPinButton />
         <Box className="UserPage">
           <Flex justifyContent="center" alignItems="center">
-            <Box className="search-bar" mx={4}>
-              <Search
+            <Box mx={4}>
+              <SearchBar
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="自販機を検索"
