@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { AppShell } from '@/components/layout/AppShell'
 import { Providers } from './providers'
 import './globals.css'
 
@@ -15,7 +16,9 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body>
-        <Providers>{children}</Providers>
+        <Providers>
+          <AppShell>{children}</AppShell>
+        </Providers>
       </body>
     </html>
   )

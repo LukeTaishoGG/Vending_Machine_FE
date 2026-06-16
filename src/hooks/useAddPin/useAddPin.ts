@@ -1,5 +1,5 @@
 import { useState, useCallback, useEffect } from 'react'
-import { geocodeAddress, reverseGeocode } from '@/hooks/geocoding/geocodingService'
+import { geocodeAddress, reverseGeocode } from '@/utils/geocoding/geocodingService'
 import {
   createPin,
   createCategory,

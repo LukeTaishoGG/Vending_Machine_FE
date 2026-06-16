@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { AddPinButtons } from '@/components/ui/AddPinButtons/AddPinButtons'
+import { AddPinButtons } from '@/components/ui/AddPinPages/AddPinButtons/AddPinButtons'
 
 const meta = {
   title: 'UI/AddPinButtons',
