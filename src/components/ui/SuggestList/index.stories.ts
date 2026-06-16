@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { SuggestList } from '@/components/ui/SuggestList/SuggestList'
+import { SuggestList } from '@/components/ui/SuggestList'
 import type { MapPin } from '@/types/pin'
 
 const meta = {

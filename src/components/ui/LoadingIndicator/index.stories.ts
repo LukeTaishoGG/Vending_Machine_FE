@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { LoadingIndicator } from '@/components/ui/LoadingIndicator/LoadingIndicator'
+import { LoadingIndicator } from '@/components/ui/LoadingIndicator'
 
 const meta = {
   title: 'UI/LoadingIndicator',

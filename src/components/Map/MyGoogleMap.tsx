@@ -10,9 +10,9 @@ import { useMapSuggestions } from '@/components/Map/hooks/useMapSuggestions'
 import { useMapInteractions } from '@/components/Map/hooks/useMapInteractions'
 import { useMapDisplayPins } from '@/components/Map/hooks/useMapDisplayPins'
 import InfoWindow from '@/components/InfoWindow/InfoWindow'
-import { SuggestList } from '@/components/ui/SuggestList/SuggestList'
-import { MapDisplay } from '@/components/ui/MapUI/MapDisplay/MapDisplay'
-import { LoadingIndicator } from '@/components/ui/LoadingIndicator/LoadingIndicator'
+import { SuggestList } from '@/components/ui/SuggestList'
+import { MapDisplay } from '@/components/ui/MapUI/MapDisplay'
+import { LoadingIndicator } from '@/components/ui/LoadingIndicator'
 
 type MyGoogleMapProps = {
   search: string
