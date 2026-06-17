@@ -53,26 +53,26 @@ const MyGoogleMap = ({ search }: MyGoogleMapProps) => {
       libraries={GOOGLE_MAP_LIBRARIES}
       mapIds={[GOOGLE_MAPS_MAP_ID]}
     >
-    <Box position="relative" w="100%" h="100%" minH={0}>
-      <SuggestList
-        suggestions={suggestPins}
-        onSuggestionClick={onSuggestClick}
-        isVisible={!!search && suggestPins.length > 0}
-      />
-      <MapDisplay
-        center={center}
-        zoom={15}
-        pins={displayPins}
-        onMarkerClick={onMarkerClick}
-        onMapLoad={(map) => {
-          mapRef.current = map
-        }}
-        onMapIdle={handleIdle}
-        mapRef={mapRef}
-      />
-      <InfoWindow pinId={selectedPinId} isOpen={isOpen} onClose={onClose} />
-      {isLoading && <LoadingIndicator />}
-    </Box>
+      <Box position="relative" w="100%" h="100%" minH={0}>
+        <SuggestList
+          suggestions={suggestPins}
+          onSuggestionClick={onSuggestClick}
+          isVisible={!!search && suggestPins.length > 0}
+        />
+        <MapDisplay
+          center={center}
+          zoom={15}
+          pins={displayPins}
+          onMarkerClick={onMarkerClick}
+          onMapLoad={(map) => {
+            mapRef.current = map
+          }}
+          onMapIdle={handleIdle}
+          mapRef={mapRef}
+        />
+        <InfoWindow pinId={selectedPinId} isOpen={isOpen} onClose={onClose} />
+        {isLoading && <LoadingIndicator />}
+      </Box>
     </LoadScript>
   )
 }

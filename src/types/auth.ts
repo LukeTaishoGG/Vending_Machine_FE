@@ -4,7 +4,6 @@ export interface User {
   email: string
 }
 
-
 // サインアップフォームデータの型定義
 export interface SignUpFormData {
   userId: string

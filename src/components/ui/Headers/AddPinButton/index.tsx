@@ -8,7 +8,7 @@ import { AddIcon } from '@chakra-ui/icons'
 export const AddPinButton = () => {
   const router = useRouter()
   const { user } = useUser()
-  
+
   return (
     <button
       className={styles.addPinButton}
@@ -21,9 +21,7 @@ export const AddPinButton = () => {
         }
       }}
     >
-      <p className={styles.addPinButtonText}>
-        ピン追加
-      </p>
+      <p className={styles.addPinButtonText}>ピン追加</p>
       <AddIcon fontSize="1.25rem" color="rgb(218, 40, 40)" />
     </button>
   )
