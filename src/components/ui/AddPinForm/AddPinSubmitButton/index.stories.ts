@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { AddPinButtons } from '@/components/ui/AddPinPages/AddPinButtons/AddPinButtons'
+import { AddPinButton } from '@/components/ui/AddPinForm/AddPinSubmitButton'
 
 const meta = {
-  title: 'UI/AddPinButtons',
-  component: AddPinButtons,
+  title: 'UI/AddPinButton',
+  component: AddPinButton,
   parameters: {
     layout: 'centered',
   },
@@ -12,7 +12,7 @@ const meta = {
     onSubmit: { action: 'submit-clicked' },
     onCancel: { action: 'cancel-clicked' },
   },
-} satisfies Meta<typeof AddPinButtons>
+} satisfies Meta<typeof AddPinButton>
 
 export default meta
 type Story = StoryObj<typeof meta>

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { AddPinForm } from '@/components/ui/AddPinPages/AddPinForm/AddPinForm'
+import { AddPinForm } from '@/components/ui/AddPinForm'
 
 const meta = {
   title: 'UI/AddPinForm',

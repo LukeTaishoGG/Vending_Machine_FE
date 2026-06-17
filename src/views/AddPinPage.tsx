@@ -3,9 +3,9 @@
 import { Box, VStack, Text } from '@chakra-ui/react'
 import Search from '@/components/SearchBar/Search'
 import { useAddPinForm } from '@/hooks/useAddPinForm/useAddPinForm'
-import { AddPinForm } from '@/components/ui/AddPinPages/AddPinForm/AddPinForm'
-import { MapSelector } from '@/components/ui/MapUI/MapSelector/MapSelector'
-import { AddPinButtons } from '@/components/ui/AddPinPages/AddPinButtons/AddPinButtons'
+import { AddPinForm } from '@/components/ui/AddPinForm'
+import { MapSelector } from '@/components/ui/GoogleMapUI/MapSelector'
+import { AddPinButton } from '@/components/ui/AddPinForm/AddPinSubmitButton'
 
 const AddPinPage = () => {
   const {
@@ -61,7 +61,7 @@ const AddPinPage = () => {
             isLoadingAddress={isLoadingAddress}
             onInputChange={handleInputChange}
           />
-          <AddPinButtons onSubmit={onSubmit} onCancel={onCancel} isSubmitting={isSubmitting} />
+          <AddPinButton onSubmit={onSubmit} onCancel={onCancel} isSubmitting={isSubmitting} />
         </Box>
       </VStack>
     </Box>

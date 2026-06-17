@@ -3,9 +3,9 @@
 import { Box, VStack, Text } from '@chakra-ui/react'
 import Search from '@/components/SearchBar/Search'
 import { useEditPinForm } from '@/hooks/useEditPinForm/useEditPinForm'
-import { AddPinForm } from '@/components/ui/AddPinPages/AddPinForm/AddPinForm'
-import { MapSelector } from '@/components/ui/MapUI/MapSelector/MapSelector'
-import { AddPinButtons } from '@/components/ui/AddPinPages/AddPinButtons/AddPinButtons'
+import { AddPinForm } from '@/components/ui/AddPinForm'
+import { MapSelector } from '@/components/ui/GoogleMapUI/MapSelector'
+import { AddPinButton } from '@/components/ui/AddPinForm/AddPinSubmitButton'
 
 const EditPinPage = () => {
   const {
@@ -74,7 +74,7 @@ const EditPinPage = () => {
             isLoadingAddress={isLoadingAddress}
             onInputChange={handleInputChange}
           />
-          <AddPinButtons
+          <AddPinButton
             onSubmit={handleUpdate}
             onCancel={handleCancel}
             isSubmitting={isSubmitting}
