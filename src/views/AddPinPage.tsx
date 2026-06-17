@@ -1,7 +1,7 @@
 'use client'
 
 import { Box, VStack, Text } from '@chakra-ui/react'
-import Search from '@/components/search/Search'
+import Search from '@/components/SearchBar/Search'
 import { useAddPinForm } from '@/hooks/useAddPinForm/useAddPinForm'
 import { AddPinForm } from '@/components/ui/AddPinPages/AddPinForm/AddPinForm'
 import { MapSelector } from '@/components/ui/MapUI/MapSelector/MapSelector'
