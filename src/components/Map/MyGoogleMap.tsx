@@ -9,10 +9,10 @@ import { useMapIdle } from '@/components/Map/hooks/useMapIdle'
 import { useMapSuggestions } from '@/components/Map/hooks/useMapSuggestions'
 import { useMapInteractions } from '@/components/Map/hooks/useMapInteractions'
 import { useMapDisplayPins } from '@/components/Map/hooks/useMapDisplayPins'
-import InfoWindow from '@/components/Map/InfoWindow/InfoWindow'
-import { SuggestList } from '@/components/ui/SuggestList/SuggestList'
-import { MapDisplay } from '@/components/ui/MapDisplay/MapDisplay'
-import { LoadingIndicator } from '@/components/ui/LoadingIndicator/LoadingIndicator'
+import InfoWindow from '@/components/InfoWindow'
+import { SuggestList } from '@/components/Map/SuggestList'
+import { MapDisplay } from '@/components/ui/GoogleMapUI/MapDisplay'
+import { LoadingIndicator } from '@/components/ui/GoogleMapUI/LoadingIndicator'
 
 type MyGoogleMapProps = {
   search: string

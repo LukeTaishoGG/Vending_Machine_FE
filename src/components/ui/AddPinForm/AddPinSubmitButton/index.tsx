@@ -1,6 +1,6 @@
 import { Button, HStack } from '@chakra-ui/react'
 
-type AddPinButtonsProps = {
+type AddPinButtonProps = {
   onSubmit: (e: React.FormEvent) => void
   onCancel: () => void
   isSubmitting?: boolean
@@ -8,13 +8,13 @@ type AddPinButtonsProps = {
   loadingText?: string
 }
 
-export const AddPinButtons = ({
+export const AddPinButton = ({
   onSubmit,
   onCancel,
   isSubmitting = false,
   submitText = 'ピンを追加',
   loadingText = '追加中...',
-}: AddPinButtonsProps) => {
+}: AddPinButtonProps) => {
   return (
     <HStack spacing={4}>
       <Button

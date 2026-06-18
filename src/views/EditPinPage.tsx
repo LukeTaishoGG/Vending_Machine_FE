@@ -1,11 +1,11 @@
 'use client'
 
 import { Box, VStack, Text } from '@chakra-ui/react'
-import Search from '@/components/search/Search'
+import Search from '@/components/SearchBar/Search'
 import { useEditPinForm } from '@/hooks/useEditPinForm/useEditPinForm'
-import { AddPinForm } from '@/components/ui/AddPinForm/AddPinForm'
-import { MapSelector } from '@/components/ui/MapSelector/MapSelector'
-import { AddPinButtons } from '@/components/ui/AddPinButtons/AddPinButtons'
+import { AddPinForm } from '@/components/ui/AddPinForm'
+import { MapSelector } from '@/components/ui/GoogleMapUI/MapSelector'
+import { AddPinButton } from '@/components/ui/AddPinForm/AddPinSubmitButton'
 
 const EditPinPage = () => {
   const {
@@ -74,7 +74,7 @@ const EditPinPage = () => {
             isLoadingAddress={isLoadingAddress}
             onInputChange={handleInputChange}
           />
-          <AddPinButtons
+          <AddPinButton
             onSubmit={handleUpdate}
             onCancel={handleCancel}
             isSubmitting={isSubmitting}

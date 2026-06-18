@@ -9,7 +9,7 @@ import {
   updateManufacturer,
   type PinDetailData,
 } from '@/services/pinDetailService'
-import { geocodeAddress, reverseGeocode } from '@/hooks/geocoding/geocodingService'
+import { geocodeAddress, reverseGeocode } from '@/utils/geocoding/geocodingService'
 import { useCurrentLocation } from '@/hooks/centerSpot/useCurrentLocation'
 import type { AddPinFormData, Location } from '@/types/addPin'
 
