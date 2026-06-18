@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { useUser } from '@/Contexts/UserContext'
+import { useUser } from '@/contexts/UserContext'
 
 export const useHeaderUser = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
