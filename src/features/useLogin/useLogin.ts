@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useUser } from '@/Contexts/UserContext'
-import { login } from '@/services/authService'
+import { login } from '@/api/authService'
 import type { LoginFormData } from '@/types/auth'
 
 export const useLogin = () => {

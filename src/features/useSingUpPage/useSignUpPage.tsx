@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { signUp } from '@/services/authService'
+import { signUp } from '@/api/authService'
 import type { SignUpFormData } from '@/types/auth'
 
 export const useSignUp = () => {

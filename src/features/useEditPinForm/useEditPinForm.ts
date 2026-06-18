@@ -8,7 +8,7 @@ import {
   updatePriceRange,
   updateManufacturer,
   type PinDetailData,
-} from '@/services/pinDetailService'
+} from '@/api/pinDetailService'
 import { geocodeAddress, reverseGeocode } from '@/utils/geocoding/geocodingService'
 import { useCurrentLocation } from '@/features/centerSpot/useCurrentLocation'
 import type { AddPinFormData, Location } from '@/types/addPin'
