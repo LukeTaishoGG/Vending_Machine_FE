@@ -1,6 +1,6 @@
 'use client'
 
-import { useSignUp } from '@/hooks/useSingUpPage/useSignUpPage'
+import { useSignUp } from '@/features/useSingUpPage/useSignUpPage'
 import SignUpForm from '@/components/ui/SignUpForm/SignUpForm'
 
 const SignUpPage = () => {

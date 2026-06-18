@@ -3,7 +3,7 @@
 import { useDisclosure, Box } from '@chakra-ui/react'
 import { useRef } from 'react'
 import type { MapPin } from '@/types/pin'
-import { useCurrentLocation } from '@/hooks/centerSpot/useCurrentLocation'
+import { useCurrentLocation } from '@/features/centerSpot/useCurrentLocation'
 import { useMapPins } from '@/components/Map/hooks/useMapPins'
 import { useMapIdle } from '@/components/Map/hooks/useMapIdle'
 import { useMapSuggestions } from '@/components/Map/hooks/useMapSuggestions'

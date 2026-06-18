@@ -1,5 +1,5 @@
 import { useCallback, type MutableRefObject } from 'react'
-import { useDebounce } from '@/hooks/debounce/debounce'
+import { useDebounce } from '@/features/debounce/debounce'
 import { fetchPinsInBounds } from '@/services/pinService'
 import { getMapBounds } from '@/components/Map/Service/mapUtils'
 import type { ApiPin } from '@/types/pin'

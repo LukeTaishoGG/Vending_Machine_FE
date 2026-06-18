@@ -12,7 +12,7 @@ import {
 import { validateUserId } from '@/hooks/validation/addPinValidation'
 import type { AddPinFormData, Location } from '@/types/addPin'
 import type { User } from '@/types/auth'
-import { useCurrentLocation } from '@/hooks/centerSpot/useCurrentLocation'
+import { useCurrentLocation } from '@/features/centerSpot/useCurrentLocation'
 
 interface UseAddPinReturn {
   formData: AddPinFormData
