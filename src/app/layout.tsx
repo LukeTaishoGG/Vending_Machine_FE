@@ -1,4 +1,4 @@
-import { AppShell } from '@/components/layout/AppShell'
+import { AppShell } from '@/components/Layout/AppShell'
 import { Providers } from './providers'
 import './globals.css'
 import type { Metadata } from 'next'
