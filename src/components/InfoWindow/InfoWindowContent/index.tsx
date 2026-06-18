@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { Spinner, Text, Box, Button } from '@chakra-ui/react'
-import { getPinDetail, type PinDetailData } from '@/services/pinDetailService'
+import { getPinDetail, type PinDetailData } from '@/api/pinDetailService'
 import { useUser } from '@/Contexts/UserContext'
 import { useRouter } from 'next/navigation'
 

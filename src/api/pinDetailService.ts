@@ -1,4 +1,4 @@
-import { API_URL } from '@/services/config'
+import { API_URL } from '@/api/config'
 
 interface ApiUpdateResponse<T = unknown> {
   success: boolean

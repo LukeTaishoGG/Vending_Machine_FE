@@ -1,5 +1,5 @@
 import type { SignUpRequest, SignUpResponse, LoginRequest, LoginResponse } from '@/types/auth'
-import { API_URL } from '@/services/config'
+import { API_URL } from '@/api/config'
 
 // サインアップAPI
 export const signUp = async (signUpData: SignUpRequest): Promise<SignUpResponse> => {

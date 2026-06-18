@@ -1,5 +1,5 @@
 import type { ApiPin, MapBounds } from '@/types/pin'
-import { API_URL } from '@/services/config'
+import { API_URL } from '@/api/config'
 
 export const fetchAllMapPins = async (): Promise<ApiPin[]> => {
   const response = await fetch(`${API_URL}/map_pins`)
