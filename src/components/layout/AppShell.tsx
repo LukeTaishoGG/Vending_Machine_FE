@@ -6,7 +6,6 @@ import HeaderUser from '@/components/ui/Headers/UserMenu'
 import Search from '@/components/SearchBar/Search'
 import { SearchProvider, useSearch } from '@/Contexts/SearchContext'
 import { useUser } from '@/Contexts/UserContext'
-import { logout } from '@/api/authService'
 
 const AddPinButton = () => {
   const { user } = useUser()

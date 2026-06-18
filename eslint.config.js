@@ -8,7 +8,7 @@ import tseslint from 'typescript-eslint'
 
 export default [
   ...tseslint.config(
-    { ignores: ['dist', 'node_modules', '.next', 'next-env.d.ts'] },
+    { ignores: ['dist', 'node_modules', '.next', 'next-env.d.ts', 'storybook-static'] },
     {
       extends: [js.configs.recommended, ...tseslint.configs.recommended],
       files: ['**/*.{ts,tsx}'],
