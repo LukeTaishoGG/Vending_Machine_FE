@@ -10,7 +10,7 @@ import {
   type PinDetailData,
 } from '@/services/pinDetailService'
 import { geocodeAddress, reverseGeocode } from '@/utils/geocoding/geocodingService'
-import { useCurrentLocation } from '@/hooks/centerSpot/useCurrentLocation'
+import { useCurrentLocation } from '@/features/centerSpot/useCurrentLocation'
 import type { AddPinFormData, Location } from '@/types/addPin'
 
 export const useEditPinForm = () => {

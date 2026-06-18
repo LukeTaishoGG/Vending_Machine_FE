@@ -2,7 +2,7 @@
 
 import { Box, VStack, Text } from '@chakra-ui/react'
 import Search from '@/components/SearchBar/Search'
-import { useAddPinForm } from '@/hooks/useAddPinForm/useAddPinForm'
+import { useAddPinForm } from '@/features/useAddPinForm/useAddPinForm'
 import { AddPinForm } from '@/components/ui/AddPinForm'
 import { MapSelector } from '@/components/ui/GoogleMapUI/MapSelector'
 import { AddPinButton } from '@/components/ui/AddPinForm/AddPinSubmitButton'
