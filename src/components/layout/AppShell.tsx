@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation'
 import { Box, Flex, Text } from '@chakra-ui/react'
-import HeaderUser from '@/components/ui/Headers/UserMenu'
+import HeaderUser from '@/components/ui/Headers'
 import Search from '@/components/SearchBar/Search'
 import { SearchProvider, useSearch } from '@/Contexts/SearchContext'
 import { useUser } from '@/Contexts/UserContext'
@@ -37,7 +37,6 @@ const AddPinButton = () => {
 const AppShellContent = ({ children }: { children: React.ReactNode }) => {
   const router = useRouter()
   const { search, setSearch } = useSearch()
-  const { user } = useUser()
 
   return (
     <Flex direction="column" w="100%" h="100vh">
@@ -64,14 +63,7 @@ const AppShellContent = ({ children }: { children: React.ReactNode }) => {
                 placeholder="自販機を検索"
               />
             </Box>
-            <HeaderUser
-              isLoggedIn={user !== null}
-              onLogout={() => {
-                router.push('/')
-              }}
-              onSignup={() => router.push('/signup')}
-              onLogin={() => router.push('/login')}
-            />
+            <HeaderUser />
           </Flex>
         </Box>
       </Box>
