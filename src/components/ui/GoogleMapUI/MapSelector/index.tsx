@@ -1,7 +1,7 @@
 import { GoogleMap } from '@react-google-maps/api'
 import { Box, Text } from '@chakra-ui/react'
 import { AdvancedMapMarker } from '@/components/Map/AdvancedMapMarker'
-import { defaultGoogleMapOptions } from '@/config/googleMaps'
+import { defaultGoogleMapOptions } from '@config/googleMaps'
 
 type MapSelectorProps = {
   center: { lat: number; lng: number }

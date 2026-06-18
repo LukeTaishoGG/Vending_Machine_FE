@@ -1,5 +1,5 @@
 import type { Libraries } from '@react-google-maps/api'
-import { GOOGLE_MAPS_MAP_ID } from '@/config/env'
+import { GOOGLE_MAPS_MAP_ID } from '@config/env'
 
 export const GOOGLE_MAP_LIBRARIES: Libraries = ['marker']
 
