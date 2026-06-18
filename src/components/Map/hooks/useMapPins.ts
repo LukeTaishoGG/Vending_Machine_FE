@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import type { ApiPin, MapPin } from '@/types/pin'
-import { fetchAllMapPins } from '@/services/pinService'
+import { fetchAllMapPins } from '@/api/pinService'
 import { convertApiPinsToMapPins } from '@/components/Map/Service/convertApiPin'
 
 export const useMapPins = () => {

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import type { MapPin } from '@/types/pin'
-import { searchMapPins } from '@/services/pinService'
+import { searchMapPins } from '@/api/pinService'
 import { convertApiPinsToMapPins } from '@/components/Map/Service/convertApiPin'
 
 export const useMapSuggestions = (search: string) => {
