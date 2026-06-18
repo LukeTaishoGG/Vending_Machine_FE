@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import type { MapPin } from '@/types/pin'
-import { MOCK_MAP_PINS } from '@/data/mockLocation'
+import { MOCK_MAP_PINS } from '@/mocks/mockLocation'
 
 export const useMapDisplayPins = (search: string, convertedPins: MapPin[]) => {
   return useMemo(() => {
