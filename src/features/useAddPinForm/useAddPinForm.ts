@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAddPin } from '@/features/useAddPin/useAddPin'
-import { useUser } from '@/Contexts/UserContext'
+import { useUser } from '@/contexts/UserContext'
 
 export const useAddPinForm = () => {
   const router = useRouter()

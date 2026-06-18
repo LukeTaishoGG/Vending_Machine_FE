@@ -34,7 +34,7 @@ export const login = async (loginData: LoginRequest): Promise<LoginResponse> => 
     const data = await response.json()
 
     if (response.ok) {
-      return { success: true, message: 'ログイン成功', token: data.token, user: data.user }
+      return { success: true, message: 'ログイン成功', user: data.user }
     } else {
       return { success: false, error: data.error || 'ログイン失敗' }
     }

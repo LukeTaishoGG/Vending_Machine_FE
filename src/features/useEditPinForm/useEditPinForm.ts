@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useRouter, useParams } from 'next/navigation'
-import { useUser } from '@/Contexts/UserContext'
+import { useUser } from '@/contexts/UserContext'
 import {
   getPinDetail,
   updatePin,
@@ -8,7 +8,7 @@ import {
   updatePriceRange,
   updateManufacturer,
   type PinDetailData,
-} from '@/services/pinDetailService'
+} from '@/api/pinDetailService'
 import { geocodeAddress, reverseGeocode } from '@/utils/geocoding/geocodingService'
 import { useCurrentLocation } from '@/features/centerSpot/useCurrentLocation'
 import type { AddPinFormData, Location } from '@/types/addPin'
