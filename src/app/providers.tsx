@@ -3,8 +3,8 @@
 import { ChakraProvider } from '@chakra-ui/react'
 import { LoadScript } from '@react-google-maps/api'
 import { UserProvider } from '@/Contexts/UserContext'
-import { GOOGLE_MAPS_API_KEY, GOOGLE_MAPS_MAP_ID } from '@/config/env'
-import { GOOGLE_MAP_LIBRARIES } from '@/config/googleMaps'
+import { GOOGLE_MAPS_API_KEY, GOOGLE_MAPS_MAP_ID } from '@config/env'
+import { GOOGLE_MAP_LIBRARIES } from '@config/googleMaps'
 
 export function Providers({ children }: { children: React.ReactNode }) {
   if (!GOOGLE_MAPS_API_KEY) {

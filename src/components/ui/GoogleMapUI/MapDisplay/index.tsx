@@ -1,6 +1,6 @@
 import { GoogleMap } from '@react-google-maps/api'
 import { AdvancedMapMarker } from '@/components/Map/AdvancedMapMarker'
-import { defaultGoogleMapOptions } from '@/config/googleMaps'
+import { defaultGoogleMapOptions } from '@config/googleMaps'
 import type { MapPin } from '@/types/pin'
 
 type MapDisplayProps = {

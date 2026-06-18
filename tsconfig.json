@@ -16,7 +16,8 @@
     "plugins": [{ "name": "next" }],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "@config/*": ["config/*"]
     },
     "noUnusedLocals": true,
     "noUnusedParameters": true,

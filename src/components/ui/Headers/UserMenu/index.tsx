@@ -1,4 +1,5 @@
 import { Avatar, Menu, MenuButton, MenuList, MenuItem, IconButton } from '@chakra-ui/react'
+import styles from './index.module.css'
 
 type UserMenuProps = {
   isLoggedIn: boolean
@@ -22,7 +23,7 @@ const UserMenu = ({ isLoggedIn, onLogout, onSignup, onLogin }: UserMenuProps) =>
         }
         variant="ghost"
       />
-      <MenuList className="user-meenu-list">
+      <MenuList className={styles.userMeenuList}>
         {!isLoggedIn ? (
           <>
             <MenuItem sx={{ color: 'blue' }} onClick={onSignup}>
