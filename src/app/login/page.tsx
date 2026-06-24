@@ -1,6 +1,6 @@
 'use client'
 import { useLogin } from '@/features/useLogin/useLogin'
-import LoginForm from '@/components/ui/LoginForm/LoginForm'
+import LoginForm from '@/components/LoginForm'
 
 export default function LoginRoute() {
   const {
