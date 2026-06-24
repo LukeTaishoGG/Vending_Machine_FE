@@ -1,7 +1,7 @@
 import { VStack, Text, Box } from '@chakra-ui/react'
-import UiLoginForm from '@/components/ui/LoginForm/LoginForm'
+import LoginForm from '@/components/ui/LoginForm/LoginForm'
 
-type LoginFormProps = {
+type LoginPageProps = {
   userIdOrEmail: string
   setUserIdOrEmail: (value: string) => void
   password: string
@@ -11,7 +11,7 @@ type LoginFormProps = {
   onSubmit: (e: React.FormEvent) => void
 }
 
-const LoginForm = ({
+export default function LoginPage({
   userIdOrEmail,
   setUserIdOrEmail,
   password,
@@ -19,14 +19,14 @@ const LoginForm = ({
   message,
   isLoading,
   onSubmit,
-}: LoginFormProps) => {
+}: LoginPageProps) {
   return (
     <Box p={6} maxW="400px" mx="auto">
       <VStack spacing={4} align="stretch">
         <Text fontSize="2xl" fontWeight="bold" textAlign="center">
           ログイン
         </Text>
-        <UiLoginForm
+        <LoginForm
           userIdOrEmail={userIdOrEmail}
           setUserIdOrEmail={setUserIdOrEmail}
           password={password}
@@ -43,5 +43,3 @@ const LoginForm = ({
     </Box>
   )
 }
-
-export default LoginForm
