@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation'
 import { Box, Flex, Text } from '@chakra-ui/react'
-import HeaderUser from '@/components/ui/Headers/UserMenu'
+import HeaderUser from '@/components/ui/Headers'
 import Search from '@/components/SearchBar/Search'
 import { SearchProvider, useSearch } from '@/Contexts/SearchContext'
 import { useUser } from '@/Contexts/UserContext'
