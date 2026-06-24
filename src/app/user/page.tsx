@@ -1,6 +1,6 @@
 'use client'
 
-import { useUser } from '@/Contexts/UserContext'
+import { useUser } from '@/contexts/UserContext'
 import { Box, VStack, Text, Heading } from '@chakra-ui/react'
 
 export default function UserRoute() {

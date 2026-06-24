@@ -4,8 +4,8 @@ import { useRouter } from 'next/navigation'
 import { Box, Flex, Text } from '@chakra-ui/react'
 import HeaderUser from '@/components/ui/Headers'
 import Search from '@/components/SearchBar/Search'
-import { SearchProvider, useSearch } from '@/Contexts/SearchContext'
-import { useUser } from '@/Contexts/UserContext'
+import { SearchProvider, useSearch } from '@/contexts/SearchContext'
+import { useUser } from '@/contexts/UserContext'
 
 const AddPinButton = () => {
   const { user } = useUser()
