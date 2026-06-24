@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useRouter, useParams } from 'next/navigation'
-import { useUser } from '@/Contexts/UserContext'
+import { useUser } from '@/contexts/UserContext'
 import {
   getPinDetail,
   updatePin,
