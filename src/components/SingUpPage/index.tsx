@@ -3,7 +3,7 @@ import SignUpForm from '@/components/ui/SignUpForm/SignUpForm'
 import { useSignUp } from '@/features/useSingUpPage/useSignUpPage'
 
 export const SignUpPage = () => {
-  const { userId, setUserId, email, setEmail, password, setPassword, message, onSubmit } =
+  const { userId, setUserId, email, setEmail, password, setPassword, message, handleSubmit } =
     useSignUp()
   return (
     <>
@@ -20,7 +20,7 @@ export const SignUpPage = () => {
             password={password}
             setPassword={setPassword}
             message={message}
-            onSubmit={onSubmit}
+            onSubmit={handleSubmit}
           />
         </VStack>
       </Box>
