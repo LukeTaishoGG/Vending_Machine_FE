@@ -1,5 +1,5 @@
 import { VStack, Text, Box } from '@chakra-ui/react'
-import LoginForm from '@/components/ui/LoginForm/LoginForm'
+import LoginForm from '@/components/ui/LoginForm'
 
 type LoginPageProps = {
   userIdOrEmail: string
